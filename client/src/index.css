@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-orange: #F1591F;
+  --color-brand-orange-dark: #D94E17;
+  --color-brand-navy: #0A0E1F;
+  --color-brand-navy-2: #10162B;
+  --color-brand-blue: #101B3D;
+  --font-display: "Poppins", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease;
+}
+
+.btn-orange {
+  background: var(--color-brand-orange);
+  color: #fff;
+}
+.btn-orange:hover {
+  background: var(--color-brand-orange-dark);
+}
+
+.btn-dark {
+  background: #10162b;
+  color: #fff;
+}
+.btn-dark:hover {
+  background: #1c2440;
+}
+
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
