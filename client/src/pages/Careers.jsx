@@ -5,7 +5,7 @@ import CareerMatchMap from "../components/careerspage/CareerMatchMap";
 import GPTWBanner from "../components/careerspage/GPTWBanner";
 import CultureValues from "../components/careerspage/CultureValues";
 import PeoplePrograms from "../components/careerspage/PeoplePrograms";
-import LifeAtStraive from "../components/LifeAtStraive";
+import LifeAtWorkScience from "../components/LifeAtWorkScience";
 import Ambassadors from "../components/careerspage/Ambassadors";
 import CareerInsights from "../components/careerspage/CareerInsights";
 import ApplyForm from "../components/careerspage/ApplyForm";
@@ -20,7 +20,7 @@ export default function Careers() {
       <GPTWBanner />
       <CultureValues />
       <PeoplePrograms />
-      <LifeAtStraive />
+      <LifeAtWorkScience />
       <Ambassadors />
       <CareerInsights />
       <ApplyForm />

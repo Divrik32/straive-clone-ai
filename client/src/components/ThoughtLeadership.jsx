@@ -1,29 +1,27 @@
-import { Landmark, FlaskConical, Trophy } from "lucide-react";
-
 const ARTICLES = [
   {
-    tag: "Whitepaper",
+    tag: "AI Insights",
     img: "/images/thought-leadership-banking-ai.png",
-    alt: "How AI is transforming banking operations",
-    title: "How AI is transforming banking operations?",
+    alt: "AI in business operations",
+    title: "How AI Is Transforming Business Operations",
     excerpt:
-      "This whitepaper explores how AI-driven intelligent automation is transforming banking operations, enabling context-aware decision-making, reducing costs, and improving efficiency across customer service, compliance, and risk management.",
+      "Explore how intelligent automation and AI-powered applications can improve productivity, streamline workflows, and support better business decisions.",
   },
   {
-    tag: "Blog",
+    tag: "Generative AI",
     img: "/images/thought-leadership-clinical-data.webp",
-    alt: "Improving clinical data quality with intelligent automation",
-    title: "Improving Clinical Data Quality: From Manual Reporting to Intelligent Automation",
+    alt: "Generative AI for enterprises",
+    title: "Building Practical Generative AI Solutions for Enterprises",
     excerpt:
-      "Clinical research is rapidly moving toward a future in which data quality must be continuously evaluated rather than reviewed after problems arise.",
+      "Organizations are moving beyond AI experimentation and exploring secure, scalable ways to bring generative AI into everyday business processes.",
   },
   {
-    tag: "Industry Recognition",
+    tag: "Automation",
     img: "/images/thought-leadership-aim-research-award.webp",
-    alt: "Straive recognized as a leader in AIM Research's PMe Quadrant",
-    title: "Straive Recognized as a Leader in AIM Research's PMe Quadrant for Agentic AI Service Providers 2025",
+    alt: "Intelligent business automation",
+    title: "From Manual Processes to Intelligent Automation",
     excerpt:
-      "Straive has been recognized as a Leader in AIM Research's PMe Quadrant for Agentic AI Service Providers 2025.",
+      "Discover how AI-powered automation can reduce repetitive work, connect business systems, and create more efficient digital workflows.",
   },
 ];
 
@@ -32,25 +30,43 @@ export default function ThoughtLeadership() {
     <section className="bg-white pb-16">
       <div className="section-container">
         <h2 className="text-2xl md:text-3xl font-semibold text-[#10162B] mb-10">
-          We Provide Industry-Leading
+          AI Insights &
           <br />
-          Thought Leadership
+          Business Perspectives
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
           {ARTICLES.map(({ tag, img, alt, title, excerpt }) => (
-            <article key={title} className="border border-black/10 rounded-lg overflow-hidden flex flex-col">
+            <article
+              key={title}
+              className="border border-black/10 rounded-lg overflow-hidden flex flex-col"
+            >
               <div className="relative h-36">
-                <img src={img} alt={alt || title} className="h-full w-full object-cover" />
+                <img
+                  src={img}
+                  alt={alt || title}
+                  className="h-full w-full object-cover"
+                />
+
                 <span className="absolute top-3 left-3 text-[9px] uppercase tracking-wide bg-brand-orange text-white px-2 py-1 rounded">
                   {tag}
                 </span>
               </div>
+
               <div className="p-5 flex flex-col flex-1">
-                <h3 className="text-sm font-semibold text-[#10162B] mb-2 leading-snug">{title}</h3>
-                <p className="text-[12px] text-[#4a4a5a] leading-relaxed mb-4 flex-1">{excerpt}</p>
-                <a href="#" className="text-[11px] font-semibold text-brand-orange">
-                  Dive Deeper &rsaquo;
+                <h3 className="text-sm font-semibold text-[#10162B] mb-2 leading-snug">
+                  {title}
+                </h3>
+
+                <p className="text-[12px] text-[#4a4a5a] leading-relaxed mb-4 flex-1">
+                  {excerpt}
+                </p>
+
+                <a
+                  href="#"
+                  className="text-[11px] font-semibold text-brand-orange"
+                >
+                  Read More &rsaquo;
                 </a>
               </div>
             </article>

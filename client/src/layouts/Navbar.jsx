@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Zap, Search, Menu, X, ChevronDown } from "lucide-react";
+import { Search, Menu, X, ChevronDown } from "lucide-react";
 import NavDropdown from "./NavDropdown";
 import { MEGA_MENUS } from "./megaMenuData";
 
@@ -20,12 +20,7 @@ export default function Navbar() {
     >
       <div className="section-container flex h-[64px] items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-1 shrink-0">
-          <Zap className="w-6 h-6 text-brand-orange fill-brand-orange" strokeWidth={2.5} />
-          <span className="text-xl font-bold tracking-tight text-[#1a1a2e]">
-            Str<span className="text-brand-orange">ai</span>ve
-          </span>
-        </a>
+<a href="/" className="flex items-center gap-2 shrink-0"> <img src="images/company-logo.jpg" alt="Work Science logo" className="w-8 h-8 object-contain" /> <span className="text-xl font-bold tracking-tight"> <span className="text-blue-600">Work</span>{" "} <span className="text-brand-orange">Science</span> </span> </a>
 
         {/* Nav + right actions grouped together: this wrapper's own edges define the
             exact left/right bounds of the mega menu dropdown below (from "Services"

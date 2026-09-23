@@ -1,9 +1,4 @@
-import { Calendar, MapPin } from "lucide-react";
-
-const LEADERS = [
-  { name: "Ankor Rai", role: "CEO, Straive", img: "/images/ankor-rai.svg" },
-  { name: "Jishnu Gupta", role: "CTO and Client Partner - Head, Europe & APAC", img: "/images/jishnu-gupta.svg" },
-];
+import { Brain, Database, Zap } from "lucide-react";
 
 export default function Slide1AIFinancial() {
   return (
@@ -11,28 +6,52 @@ export default function Slide1AIFinancial() {
       className="relative w-full h-full overflow-hidden text-white"
       style={{
         background:
-          "linear-gradient(115deg, #150a3d 0%, #0a0e2e 28%, #0a1730 55%, #0a2f2c 78%, #0f3d33 100%)",
+          "linear-gradient(115deg, #150a3d 0%, #0a0e2e 30%, #0a1730 58%, #0a2f2c 80%, #0f3d33 100%)",
       }}
     >
       <div className="absolute inset-0 opacity-60 bg-[radial-gradient(circle_at_10%_15%,rgba(99,60,255,0.35),transparent_45%)]" />
       <div className="absolute inset-0 opacity-50 bg-[radial-gradient(circle_at_90%_10%,rgba(52,211,153,0.3),transparent_50%)]" />
 
-      <svg className="absolute bottom-0 left-0 w-[420px] h-[260px] opacity-40" viewBox="0 0 420 260" fill="none">
+      <svg
+        className="absolute bottom-0 left-0 w-[420px] h-[260px] opacity-40"
+        viewBox="0 0 420 260"
+        fill="none"
+      >
         {[...Array(6)].map((_, i) => (
-          <line key={i} x1={0} y1={260 - i * 30} x2={420 - i * 40} y2={260} stroke="#3b82f6" strokeWidth="1" />
+          <line
+            key={i}
+            x1={0}
+            y1={260 - i * 30}
+            x2={420 - i * 40}
+            y2={260}
+            stroke="#3b82f6"
+            strokeWidth="1"
+          />
         ))}
+
         {[...Array(10)].map((_, i) => (
-          <circle key={i} cx={(i * 43) % 420} cy={260 - ((i * 61) % 240)} r="2" fill="#60a5fa" />
+          <circle
+            key={i}
+            cx={(i * 43) % 420}
+            cy={260 - ((i * 61) % 240)}
+            r="2"
+            fill="#60a5fa"
+          />
         ))}
       </svg>
 
-      <svg className="absolute top-10 right-0 w-[380px] h-[260px] opacity-70" viewBox="0 0 380 260" fill="none">
+      <svg
+        className="absolute top-10 right-0 w-[380px] h-[260px] opacity-70"
+        viewBox="0 0 380 260"
+        fill="none"
+      >
         <polyline
           points="0,220 40,190 80,205 120,150 160,165 200,110 240,120 280,60 320,75 380,10"
           stroke="#34d399"
           strokeWidth="2"
           fill="none"
         />
+
         {[30, 70, 110, 150, 190, 230, 270, 310, 350].map((x, i) => (
           <rect
             key={x}
@@ -49,60 +68,77 @@ export default function Slide1AIFinancial() {
       <div className="relative section-container h-full flex items-center py-10">
         <div className="grid md:grid-cols-2 gap-12 items-center w-full">
           <div>
+            <p className="text-sm uppercase tracking-[0.25em] text-emerald-300 mb-4">
+              Work Science AI
+            </p>
+
             <h1 className="text-3xl md:text-[2.6rem] font-bold leading-tight mb-6">
-              AI Is Changing the Equation
+              Intelligent AI Solutions
               <br />
-              for <span className="text-emerald-400">Financial Services</span>
+              for{" "}
+              <span className="text-emerald-400">
+                Modern Businesses
+              </span>
             </h1>
 
             <div className="inline-block border border-white/25 rounded-xl px-5 py-4 mb-8 bg-white/5 backdrop-blur-sm">
               <p className="text-sm md:text-base font-medium leading-snug">
-                8th Annual Artificial Intelligence in
+                From intelligent automation
                 <br />
-                Financial Services Conference 2026
+                to enterprise AI applications
               </p>
             </div>
 
-            <div className="flex items-center gap-3 mb-4">
-              <Calendar className="w-5 h-5 text-white/70 shrink-0" />
-              <p className="text-base">
-                September <span className="font-bold text-xl">8&ndash;9</span>
-                <sup className="text-xs">th</sup>
-                <br />
-                <span className="font-bold text-xl">2026</span>
-              </p>
-            </div>
-            <div className="flex items-center gap-3 mb-8">
-              <MapPin className="w-5 h-5 text-white/70 shrink-0" />
-              <p className="text-sm text-white/80">155 Bishopsgate, London</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+              <div className="flex items-center gap-2">
+                <Brain className="w-5 h-5 text-emerald-300" />
+                <span className="text-sm text-white/80">
+                  Generative AI
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Database className="w-5 h-5 text-sky-300" />
+                <span className="text-sm text-white/80">
+                  AI Data Solutions
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Zap className="w-5 h-5 text-orange-300" />
+                <span className="text-sm text-white/80">
+                  Automation
+                </span>
+              </div>
             </div>
 
             <button
               className="relative text-white text-xs font-semibold uppercase pl-5 pr-8 py-3 bg-gradient-to-r from-brand-orange to-brand-orange/20"
-              style={{ clipPath: "polygon(0 0, 100% 0, 88% 100%, 0% 100%)" }}
+              style={{
+                clipPath:
+                  "polygon(0 0, 100% 0, 88% 100%, 0% 100%)",
+              }}
             >
-              Meet Us at Booth #22
+              Explore AI Solutions
             </button>
           </div>
 
-          <div>
-            <div className="flex items-center gap-3 mb-8 justify-center md:justify-end">
-              <span className="h-px w-10 bg-white/40" />
-              <h3 className="text-lg font-medium">Our Leadership Team</h3>
-              <span className="h-px w-10 bg-white/40" />
-            </div>
-            <div className="flex gap-5 justify-center md:justify-end">
-              {LEADERS.map((leader) => (
-                <div key={leader.name} className="relative w-[150px] md:w-[170px]">
-                  <div className="w-full h-[190px] md:h-[210px] rounded-t-[85px] bg-gradient-to-b from-emerald-200 to-emerald-500/50 overflow-hidden">
-                    <img src={leader.img} alt={leader.name} className="w-full h-full object-cover" />
-                  </div>
-                  <div className="bg-[#241a5c]/90 px-3 py-2">
-                    <p className="text-white text-sm font-semibold leading-tight">{leader.name}</p>
-                    <p className="text-white/60 text-[10px] leading-tight mt-0.5">{leader.role}</p>
-                  </div>
+          <div className="hidden md:flex justify-end">
+            <div className="relative w-[390px] h-[330px]">
+              <div className="absolute top-8 right-10 w-44 h-44 rounded-full border border-emerald-300/30 flex items-center justify-center">
+                <div className="w-28 h-28 rounded-full bg-emerald-400/10 border border-emerald-300/30 flex items-center justify-center">
+                  <Brain className="w-12 h-12 text-emerald-300" />
                 </div>
-              ))}
+              </div>
+
+              <div className="absolute bottom-6 left-5 bg-white/5 border border-white/10 rounded-xl px-5 py-4 backdrop-blur-sm">
+                <p className="text-xs text-white/50 uppercase">
+                  AI Focus
+                </p>
+                <p className="text-lg font-semibold">
+                  Build. Automate. Scale.
+                </p>
+              </div>
             </div>
           </div>
         </div>

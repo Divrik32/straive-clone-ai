@@ -4,11 +4,10 @@ import AgenticAI from "../components/AgenticAI";
 import IndustriesGrid from "../components/IndustriesGrid";
 import HyperscalerPartners from "../components/HyperscalerPartners";
 import ImpactCases from "../components/ImpactCases";
-import WeAreStraive from "../components/WeAreStraive";
+import WeAreWorkScience from "../components/WeAreWorkScience";
 import StatsSection from "../components/StatsSection";
-import AwardsCarousel from "../components/AwardsCarousel";
 import ThoughtLeadership from "../components/ThoughtLeadership";
-import LifeAtStraive from "../components/LifeAtStraive";
+import LifeAtWorkScience from "../components/LifeAtWorkScience";
 import CTABanner from "../components/CTABanner";
 import ContactForm from "../components/ContactForm";
 
@@ -21,11 +20,10 @@ export default function Home() {
       <IndustriesGrid />
       <HyperscalerPartners />
       <ImpactCases />
-      <WeAreStraive />
+      <WeAreWorkScience />
       <StatsSection />
-      <AwardsCarousel />
       <ThoughtLeadership />
-      <LifeAtStraive />
+      <LifeAtWorkScience />
       <CTABanner />
       <ContactForm />
     </>

@@ -1,13 +1,24 @@
 import { useState } from "react";
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ firstName: "", lastName: "", email: "", message: "" });
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+
   const [agree, setAgree] = useState(false);
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e) =>
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     alert("Thanks! We'll get back to you soon.");
   };
 
@@ -15,17 +26,26 @@ export default function ContactForm() {
     <section className="bg-[#f2f2f2] py-16">
       <div className="section-container max-w-2xl">
         <div className="text-center mb-8">
-          <h2 className="text-2xl font-semibold text-[#10162B] mb-2">Get In Touch</h2>
+          <h2 className="text-2xl font-semibold text-[#10162B] mb-2">
+            Let's Build Something Intelligent
+          </h2>
+
           <p className="text-sm text-[#4a4a5a]">
-            Enter your information and describe your inquiry. We&rsquo;ll get back to you as soon as
-            possible. Thanks!
+            Tell us about your business challenge, technology requirement, or
+            AI opportunity. Our team will get in touch with you.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white rounded-lg p-6 md:p-8 space-y-5 shadow-sm">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white rounded-lg p-6 md:p-8 space-y-5 shadow-sm"
+        >
           <div className="grid sm:grid-cols-2 gap-5">
             <label className="block">
-              <span className="text-[11px] font-medium text-[#10162B]">First Name*</span>
+              <span className="text-[11px] font-medium text-[#10162B]">
+                First Name*
+              </span>
+
               <input
                 name="firstName"
                 value={form.firstName}
@@ -34,8 +54,12 @@ export default function ContactForm() {
                 className="mt-1 w-full border border-black/15 rounded-md px-3 py-2 text-sm outline-none focus:border-brand-orange"
               />
             </label>
+
             <label className="block">
-              <span className="text-[11px] font-medium text-[#10162B]">Last Name*</span>
+              <span className="text-[11px] font-medium text-[#10162B]">
+                Last Name*
+              </span>
+
               <input
                 name="lastName"
                 value={form.lastName}
@@ -47,7 +71,10 @@ export default function ContactForm() {
           </div>
 
           <label className="block">
-            <span className="text-[11px] font-medium text-[#10162B]">Work Email*</span>
+            <span className="text-[11px] font-medium text-[#10162B]">
+              Work Email*
+            </span>
+
             <input
               type="email"
               name="email"
@@ -59,22 +86,25 @@ export default function ContactForm() {
           </label>
 
           <label className="block">
-            <span className="text-[11px] font-medium text-[#10162B]">Message*</span>
+            <span className="text-[11px] font-medium text-[#10162B]">
+              Tell Us About Your Requirement*
+            </span>
+
             <textarea
               name="message"
               rows={4}
               value={form.message}
               onChange={handleChange}
               required
+              placeholder="Tell us about your project, AI requirement, or business challenge..."
               className="mt-1 w-full border border-black/15 rounded-md px-3 py-2 text-sm outline-none focus:border-brand-orange resize-y"
             />
           </label>
 
           <p className="text-[10px] text-[#7a7a8a] leading-relaxed">
-            By providing my contact information, I authorize Straive to send me personalized
-            communications about its solutions and services. Please see our{" "}
-            <a href="#" className="text-brand-orange underline">Privacy Policy</a> for more details
-            or to opt out at any time.
+            By submitting this form, you agree that Work Science may use the
+            information provided to respond to your inquiry and discuss relevant
+            products or services.
           </p>
 
           <label className="flex items-center gap-2 text-[11px] text-[#4a4a5a]">
@@ -84,11 +114,15 @@ export default function ContactForm() {
               onChange={(e) => setAgree(e.target.checked)}
               className="accent-brand-orange"
             />
-            Contact me to schedule a Solution Discussion.
+
+            I would like to discuss an AI or technology solution.
           </label>
 
-          <button type="submit" className="btn-pill btn-orange text-[11px] px-8 py-3 uppercase">
-            Submit
+          <button
+            type="submit"
+            className="btn-pill btn-orange text-[11px] px-8 py-3 uppercase"
+          >
+            Submit Inquiry
           </button>
         </form>
       </div>
