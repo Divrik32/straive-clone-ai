@@ -8,70 +8,136 @@ import OfferingHighlights from "../../components/servicepage/OfferingHighlights"
 import ThoughtLeadership from "../../components/ThoughtLeadership";
 import CTABanner from "../../components/CTABanner";
 
-const TABS = ["Data Management", "Insights & Analytics", "AI Design & Deployment", "Product Engg. & Ops"];
+const TABS = [
+  "AI Engineering",
+  "Generative AI",
+  "AI Automation",
+  "Data & Analytics",
+];
 
 const CASE_CARDS = [
   {
-    title: "Generated high-quality author database and insights",
-    text: "Straive built a scalable pipeline that enriched and structured author data, powering discoverability and analytics for a global publisher.",
-    bg: "bg-pink-100",
+    title: "Automated business data processing with AI",
+    text: "Work Science helps organizations automate repetitive data workflows, transform unstructured information, and turn operational data into actionable business insights.",
+    bg: "bg-blue-100",
     img: "/images/dm-case-author-database.webp",
   },
   {
-    title: "Streamlined data extraction from complex documents",
-    text: "Our AI-driven extraction engine standardized unstructured data from thousands of complex documents into clean, usable formats.",
+    title: "Intelligent document understanding",
+    text: "AI-powered document processing can extract relevant information from invoices, forms, reports, and other business documents while reducing manual processing effort.",
     bg: "bg-emerald-100",
     img: "/images/dm-case-data-extraction.jpg",
   },
 ];
 
-const CAPABILITIES = ["Data Curation & Summarisation", "Data Architecture & Engineering", "Data Strategy & Governance", "Data Quality"];
+const CAPABILITIES = [
+  "Data Engineering & Integration",
+  "AI-Powered Data Processing",
+  "Data Quality & Validation",
+  "Business Intelligence & Analytics",
+  "Document Intelligence",
+  "Data Automation",
+];
 
 const ACCELERATORS = [
-  { name: "Sparta AI", sub: "IDP Platform", img: "/images/accelerator-sparta-ai.jpg" },
-  { name: "LLM Foundry", sub: "Data Playground", img: "/images/accelerator-llm-foundry.jpg" },
-  { name: "Gramener", sub: "Data Manage", img: "/images/accelerator-gramener.webp" },
+  {
+    name: "AI Workflow Engine",
+    sub: "Intelligent Automation",
+    img: "/images/accelerator-sparta-ai.jpg",
+  },
+  {
+    name: "Document AI",
+    sub: "Intelligent Extraction",
+    img: "/images/accelerator-llm-foundry.jpg",
+  },
+  {
+    name: "Analytics Hub",
+    sub: "Business Intelligence",
+    img: "/images/accelerator-gramener.webp",
+  },
 ];
 
 const TECH_LOGOS = [
   { name: "AWS", img: "/images/logo-aws.png" },
-  { name: "Databricks", img: "/images/logo-databricks.png" },
+  { name: "Microsoft Azure", img: "/images/logo-microsoft.jpg" },
   { name: "Google Cloud", img: "/images/logo-google-cloud.jpg" },
-  { name: "Microsoft", img: "/images/logo-microsoft.jpg" },
+  { name: "Databricks", img: "/images/logo-databricks.png" },
   { name: "Snowflake", img: "/images/logo-snowflake.png" },
 ];
 
 const INDUSTRIES = [
-  { name: "Science & Research", text: "Accelerate discovery with AI-curated research data pipelines that reduce manual review time and surface insights faster." },
-  { name: "Logistics & Supply Chain", text: "Unify fragmented logistics data into a single governed layer that powers real-time visibility and planning." },
-  { name: "EdTech", text: "Structure and enrich learning content data to personalize experiences and improve content discoverability." },
-  { name: "Financial & Information Services", text: "Ensure accurate, compliant, and audit-ready data across financial reporting and information products." },
-  { name: "Pharma & Life Sciences", text: "Manage clinical and research data with the rigor and traceability regulated industries demand." },
+  {
+    name: "Banking & Finance",
+    text: "Automate financial data processing, reporting, document workflows, and analytics while improving operational visibility.",
+  },
+  {
+    name: "Healthcare",
+    text: "Structure and process complex healthcare information to support efficient workflows, reporting, and data-driven operations.",
+  },
+  {
+    name: "Retail & E-commerce",
+    text: "Connect customer, product, and transaction data to improve analytics, personalization, and operational decision-making.",
+  },
+  {
+    name: "Education",
+    text: "Organize learning and administrative data to create smarter workflows, analytics, and digital experiences.",
+  },
+  {
+    name: "Professional Services",
+    text: "Automate information-heavy business processes and transform operational data into useful insights for teams and decision-makers.",
+  },
 ];
 
 const HIGHLIGHTS = [
-  { title: "Unparalleled Data Accuracy and Integrity", text: "99.9% data accuracy achieved through automated validation and AI-assisted quality checks.", bg: "bg-emerald-50" },
-  { title: "Seamless Scalability Across Data Environments", text: "100% compatibility with structured, semi-structured, and unstructured data ecosystems.", bg: "bg-amber-50" },
+  {
+    title: "Smarter Data Operations",
+    text: "Use automation and AI-assisted processing to reduce repetitive manual data tasks and improve workflow efficiency.",
+    bg: "bg-blue-50",
+  },
+  {
+    title: "Connected Business Insights",
+    text: "Bring data from multiple business systems together to create clearer reporting and more informed operational decisions.",
+    bg: "bg-amber-50",
+  },
 ];
 
 export default function DataManagement() {
   return (
     <>
-      <ServiceHero title="Data Management" subtitle="Experience data in action." tabs={TABS} activeTab={0} />
-      <ServiceIntro
-        heading="Turn your data assets into a strategic advantage"
-        body="Data is the key to establishing market differentiation, but many organizations still struggle to fully unlock its value. Our approach makes managing data assets an achievable strategic priority, delivering seamless efficiency across your enterprise."
+      <ServiceHero
+        title="Data & Analytics"
+        subtitle="Turn business data into actionable intelligence."
+        tabs={TABS}
+        activeTab={0}
       />
-      <ImpactCards heading="Delivering impact with our services" cards={CASE_CARDS} />
-      <CapabilitiesList heading="Services that augment your data management capabilities" items={CAPABILITIES} />
+
+      <ServiceIntro
+        heading="Build a smarter foundation for your AI-driven business"
+        body="Modern businesses generate large volumes of information across applications, documents, and operational systems. Work Science helps organize, integrate, process, and analyze that data so organizations can automate workflows and make better use of their information."
+      />
+
+      <ImpactCards
+        heading="Transforming data into business value"
+        cards={CASE_CARDS}
+      />
+
+      <CapabilitiesList
+        heading="Data capabilities built for modern businesses"
+        items={CAPABILITIES}
+      />
+
       <AcceleratorsRow
-        heading="Accelerate your journey to value with pre-built accelerators"
+        heading="Accelerate your data and AI initiatives"
         accelerators={ACCELERATORS}
         techLogos={TECH_LOGOS}
       />
+
       <IndustryTabs industries={INDUSTRIES} />
+
       <OfferingHighlights highlights={HIGHLIGHTS} />
+
       <ThoughtLeadership />
+
       <CTABanner />
     </>
   );

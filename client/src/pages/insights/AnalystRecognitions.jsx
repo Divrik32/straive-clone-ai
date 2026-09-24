@@ -3,53 +3,64 @@ import InsightsCardGrid from "../../components/insightspage/InsightsCardGrid";
 
 const RECOGNITIONS = [
   {
-    title: "Straive Recognized as a Leader in AIM Research's PeMa Quadrant for Agentic AI Service Providers 2025",
-    excerpt: "Straive has been recognized as a Leader in AIM Research's PeMa Quadrant for Agentic AI Service Providers 2025.",
+    title: "Work Science Recognized for Excellence in Agentic AI Services",
+    excerpt:
+      "Recognition highlighting strong capabilities in agentic AI, enterprise automation, and AI-led transformation.",
     img: "/images/ar-card-1.webp",
-    badge: "AIM Research",
+    badge: "AI Research",
   },
   {
-    title: "Straive Recognized as a Star Performer in Everest Group's Data & AI Services Specialists \u2014 North America PEAK Matrix\u00ae Assessment 2025",
-    excerpt: "Straive has been recognized as a Star Performer in Everest Group's Data & AI Services Specialists \u2014 North America PEAK Matrix\u00ae Assessment 2025.",
+    title: "Work Science Recognized for Excellence in Data & AI Services",
+    excerpt:
+      "Recognition highlighting capabilities across data engineering, analytics, AI, and enterprise transformation.",
     img: "/images/ar-card-2.webp",
-    badge: "Everest Group",
+    badge: "Industry Research",
   },
   {
-    title: "Straive Recognized as a Leader in AIM Research's PeMa Quadrant for Data Engineering Service Providers 2025",
-    excerpt: "Straive has been recognized as a Leader in AIM Research's PeMa Quadrant for Data Engineering Service Providers 2025.",
+    title: "Work Science Recognized for Data Engineering Capabilities",
+    excerpt:
+      "Recognition highlighting expertise in modern data engineering, data platforms, and scalable analytics solutions.",
     img: "/images/ar-card-3.webp",
-    badge: "AIM Research",
+    badge: "AI Research",
   },
   {
-    title: "Straive's Intelligent Document Processing (IDP) Capabilities Featured in ISG's Provider Lens\u2122 Intelligent Automation \u2013 Solution and Services Report 2022",
-    excerpt: "We have been recognized for its strong vision, clear-cut development roadmap, innovative and advanced...",
+    title: "Work Science Capabilities Featured in Intelligent Automation Research",
+    excerpt:
+      "Our intelligent automation capabilities help organizations transform document-heavy and operational workflows.",
     img: "/images/ar-card-4.webp",
-    badge: "ISG",
+    badge: "Industry Research",
   },
   {
-    title: "Straive Recognized as a Product Challenger in AI & Analytics in ISG Provider Lens\u2122 Contact Center \u2014 Customer Experience Services 2022 Global Study",
-    excerpt: "We have been recognized as a Product Challenger in AI & Analytics in ISG Provider Lens\u2122 Contact Center...",
+    title: "Work Science Recognized for AI & Analytics Capabilities",
+    excerpt:
+      "Our AI and analytics capabilities support organizations in improving customer experiences and operational efficiency.",
     img: "/images/ar-card-5.webp",
-    badge: "ISG",
+    badge: "Industry Research",
   },
   {
-    title: "Straive's Intelligent Document Processing (IDP) Capabilities Featured in ISG's Provider Lens\u2122 Intelligent Automation \u2014 Solutions & Services US Report 2021",
-    excerpt: "ISG's latest research report on Intelligent Automation has highlighted Straive's document processing...",
+    title: "Work Science Intelligent Document Processing Capabilities",
+    excerpt:
+      "Our document processing capabilities help organizations extract, classify, and manage information from complex documents.",
     img: "/images/ar-card-6.webp",
-    badge: "ISG",
+    badge: "Industry Research",
   },
   {
-    title: "Straive Featured in ISG Provider Lens\u2122 Contact Center \u2014 Customer Experience Services Report 2021",
-    excerpt: "ISG's report has recognized Straive's experience, knowledge, deep domain expertise, advanced delivery centers...",
+    title: "Work Science Featured for Data, AI, and Digital Transformation Capabilities",
+    excerpt:
+      "Our technology and domain expertise help organizations modernize operations and build scalable digital solutions.",
     img: "/images/ar-card-7.webp",
-    badge: "ISG",
+    badge: "Industry Research",
   },
 ];
 
 export default function AnalystRecognitions() {
   return (
     <>
-      <InsightsHero title="Analyst Recognitions" img="/images/insights-hero-analyst.webp" />
+      <InsightsHero
+        title="Analyst Recognitions"
+        img="/images/insights-hero-analyst.webp"
+      />
+
       <InsightsCardGrid items={RECOGNITIONS} />
     </>
   );

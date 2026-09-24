@@ -7,35 +7,70 @@ import OfferingHighlights from "../../components/servicepage/OfferingHighlights"
 import ThoughtLeadership from "../../components/ThoughtLeadership";
 import CTABanner from "../../components/CTABanner";
 
-const TABS = ["Insights & Analytics", "AI Design & Deployment", "Product Engg. & Ops"];
+const TABS = [
+  "AI Engineering",
+  "Generative AI",
+  "AI Automation",
+];
 
 const CASE_CARDS = [
   {
-    title: "Developed learning content to empower learners in real-time.",
-    text: "Built AI-enhanced conversational learning content for 25+ science and engineering subjects for a leading EdTech provider.",
-    bg: "bg-pink-100",
+    title: "Built intelligent AI assistants for business workflows",
+    text: "Designed AI-powered assistants that help teams access information, automate repetitive tasks, and interact with business data through natural language.",
+    bg: "bg-blue-100",
     img: "/images/add-case-learning-content.jpg",
   },
   {
-    title: "Enabled accessibility enhancements across diverse educational materials.",
-    text: "Generated 2.3 million+ image descriptions and remediated 50,000+ pages and slides to drive higher accessibility for students.",
+    title: "Automated document-heavy business processes",
+    text: "Applied AI and intelligent document processing to extract information, classify content, and reduce manual effort across operational workflows.",
     bg: "bg-emerald-100",
     img: "/images/add-case-accessibility.webp",
   },
 ];
 
-const CAPABILITIES = ["AI Infrastructure Setup", "AI Training", "AI Development & Training", "AI Deployment"];
+const CAPABILITIES = [
+  "AI Solution Architecture",
+  "Generative AI Development",
+  "AI Model Integration",
+  "AI Agent Development",
+  "AI Deployment & Integration",
+  "AI Monitoring & Optimization",
+];
 
 const INDUSTRIES = [
-  { name: "Science & Research", text: "The exponential growth of complex research data, siloed knowledge across institutions, and the increasing pressure to accelerate breakthrough discoveries are some of the key challenges faced by businesses in this domain." },
-  { name: "Financial & Information Services", text: "By integrating AI-powered solutions into research workflows, your organization can significantly enhance its ability to process and analyze vast datasets, identify patterns, and generate new hypotheses." },
-  { name: "Pharma & Life Sciences", text: "Through operationalizing AI, you can accelerate scientific discovery, reduce costs, and drive impactful innovations faster." },
-  { name: "Retail Tech, Entertainment & Media", text: "AI-driven personalization and content intelligence help media and retail platforms engage audiences at scale." },
+  {
+    name: "Banking & Finance",
+    text: "Build AI solutions for document processing, customer support, financial workflows, risk analysis, and internal knowledge management.",
+  },
+  {
+    name: "Healthcare",
+    text: "Apply AI to information-heavy workflows, document understanding, knowledge access, and operational automation while keeping business requirements in focus.",
+  },
+  {
+    name: "Retail & E-commerce",
+    text: "Use AI-powered assistants, recommendations, content intelligence, and automation to improve digital customer experiences and business operations.",
+  },
+  {
+    name: "Education",
+    text: "Create intelligent learning assistants, content processing workflows, and AI-powered platforms that make educational information easier to access and manage.",
+  },
+  {
+    name: "Professional Services",
+    text: "Automate knowledge-intensive processes, build internal AI assistants, and connect enterprise information with intelligent workflows.",
+  },
 ];
 
 const HIGHLIGHTS = [
-  { title: "Enterprise-Grade AI Platforms", text: "Deploy AI systems with the reliability and governance a scalable, future-proof enterprise demands.", bg: "bg-emerald-50" },
-  { title: "Faster, Reliable AI Deployment", text: "Seamlessly integrate AI into robust production environments for consistent, measurable performance.", bg: "bg-amber-50" },
+  {
+    title: "Production-Ready AI Solutions",
+    text: "Design and integrate AI applications with the architecture, security, scalability, and reliability required for real-world business environments.",
+    bg: "bg-emerald-50",
+  },
+  {
+    title: "From AI Prototype to Production",
+    text: "Move AI ideas beyond experimentation by connecting models, applications, data, and business workflows into practical solutions.",
+    bg: "bg-amber-50",
+  },
 ];
 
 export default function AIDesignDeployment() {
@@ -43,19 +78,32 @@ export default function AIDesignDeployment() {
     <>
       <ServiceHero
         title="AI Design & Deployment"
-        subtitle="Accelerate your journey to becoming an AI-first company."
+        subtitle="Build and deploy practical AI solutions for modern businesses."
         tabs={TABS}
-        activeTab={1}
+        activeTab={0}
       />
+
       <ServiceIntro
-        heading="Operationalize AI into every business function"
-        body="Transform your organization's capabilities by identifying high-impact use cases, developing custom AI solutions, and operationalizing them across your enterprise-grade security and scalability. Accelerate transformation while minimizing risk, resources, and achieving measurable business outcomes with our expertise paving the path for your growth."
+        heading="Turn AI ideas into production-ready solutions"
+        body="Work Science helps organizations move from AI concepts and prototypes to practical business applications. From solution architecture and generative AI development to deployment and integration, we build AI systems designed around real business workflows and measurable outcomes."
       />
-      <ImpactCards heading="Delivering impact with our services" cards={CASE_CARDS} />
-      <CapabilitiesList heading="Services that augment your AI capabilities" items={CAPABILITIES} />
+
+      <ImpactCards
+        heading="Creating practical impact with AI"
+        cards={CASE_CARDS}
+      />
+
+      <CapabilitiesList
+        heading="Services that accelerate your AI journey"
+        items={CAPABILITIES}
+      />
+
       <IndustryTabs industries={INDUSTRIES} />
+
       <OfferingHighlights highlights={HIGHLIGHTS} />
+
       <ThoughtLeadership />
+
       <CTABanner />
     </>
   );

@@ -1,4 +1,11 @@
-import { Landmark, Building2, HandCoins, Cpu, Wallet, Network } from "lucide-react";
+import {
+  Landmark,
+  Building2,
+  HandCoins,
+  Cpu,
+  Wallet,
+  Network,
+} from "lucide-react";
 import IndustryHero from "../../components/industrypage/IndustryHero";
 import IndustryBanner from "../../components/industrypage/IndustryBanner";
 import IconCardGrid from "../../components/servicepage/IconCardGrid";
@@ -6,128 +13,179 @@ import ToolkitTabs from "../../components/servicepage/ToolkitTabs";
 import ContactForm from "../../components/ContactForm";
 
 const SOLUTIONS = [
-  { img: "/images/bf-solution-1.jpeg", title: "Insights & Analytics", text: "Unlock advanced analytics and AI through data to drive smarter decision-making and business success." },
-  { img: "/images/bf-solution-2.webp", title: "Product Engg. & Expert-in-Loop Ops", text: "Redesign workflows and interfaces with data and AI-powered operations to optimize human roles and efficiency." },
-  { img: "/images/bf-solution-3.jpg", title: "AI Design & Deployment", text: "Build a strong AI foundation with LLM models, data pipelines, and fine-tuning solutions to optimize performance." },
-  { img: "/images/bf-solution-4.jpg", title: "Advisory", text: "Identify advanced analytics and data opportunities with diagnostics and business case prioritization to drive decisions." },
+  {
+    img: "/images/bf-solution-1.jpeg",
+    title: "Insights & Analytics",
+    text: "Transform financial and operational data into dashboards, analytics, and actionable insights for better business decisions.",
+  },
+  {
+    img: "/images/bf-solution-2.webp",
+    title: "AI-Powered Operations",
+    text: "Redesign repetitive workflows with AI and automation to improve operational efficiency and support teams with intelligent tools.",
+  },
+  {
+    img: "/images/bf-solution-3.jpg",
+    title: "AI Design & Deployment",
+    text: "Build practical AI applications by connecting models, data, applications, and business workflows.",
+  },
+  {
+    img: "/images/bf-solution-4.jpg",
+    title: "Data & AI Advisory",
+    text: "Identify practical opportunities for analytics, automation, and AI through structured discovery and use-case prioritization.",
+  },
 ];
 
 const USE_CASES = [
   {
-    name: "Fraud, AML & Security",
+    name: "Fraud & Risk Intelligence",
     img: "/images/bfs-usecase-1.webp",
-    alt: "Fraud, AML and Security",
+    alt: "Fraud and risk intelligence",
     description:
-      "AI-driven anomaly detection and network analysis identify fraud and AML risks in real time, reducing false positives while maintaining regulatory compliance.",
+      "Use analytics and AI-assisted monitoring to identify unusual patterns and support fraud, risk, and compliance teams.",
     bulletsTitle: "What It Delivers:",
     bullets: [
-      "Real-time fraud and AML monitoring",
-      "Reduced false-positive rates",
-      "Faster investigation cycles",
+      "Intelligent anomaly detection",
+      "Risk monitoring workflows",
+      "Faster investigation support",
     ],
   },
-
   {
-    name: "Marketing Analytics",
+    name: "Customer Analytics",
     img: "/images/bfs-usecase-2.webp",
-    alt: "Marketing Analytics",
+    alt: "Customer analytics",
     description:
-      "Segment, refine segmentation, and assess retention. Identify cross-sell and upsell opportunities with AI-powered personalized engagement.",
+      "Analyze customer behavior and business data to improve segmentation, engagement, retention, and service experiences.",
     bulletsTitle: "What It Delivers:",
     bullets: [
-      "Precision customer segmentation",
-      "AI-driven cross-sell/upsell targeting",
-      "Improved campaign ROI",
+      "Customer segmentation",
+      "Behavioral insights",
+      "Personalized engagement opportunities",
     ],
   },
-
   {
-    name: "Collections & Remediations",
+    name: "Collections & Remediation",
     img: "/images/bfs-usecase-3.webp",
-    alt: "Collections and Remediations",
+    alt: "Collections and remediation",
     description:
-      "Predictive models prioritize collections outreach and remediation workflows, improving recovery rates while maintaining a compliant customer experience.",
+      "Use predictive analytics and workflow automation to organize collection activities and support remediation processes.",
     bulletsTitle: "What It Delivers:",
     bullets: [
-      "Prioritized collections queues",
-      "Improved recovery rates",
-      "Compliant remediation workflows",
+      "Prioritized workflows",
+      "Data-driven decision support",
+      "Automated process management",
     ],
   },
-
   {
-    name: "Care Center & Operations",
+    name: "Customer Service & Operations",
     img: "/images/bfs-usecase-4.webp",
-    alt: "Care Center and Operations",
+    alt: "Customer service and operations",
     description:
-      "AI copilots and automation streamline contact center operations, reducing handling time and improving customer satisfaction.",
+      "AI assistants and workflow automation can support service teams with information retrieval, request handling, and repetitive operational tasks.",
     bulletsTitle: "What It Delivers:",
     bullets: [
-      "Reduced average handling time",
-      "Higher first-contact resolution",
-      "Consistent service quality",
+      "AI-assisted customer support",
+      "Faster information access",
+      "Automated service workflows",
     ],
   },
-
   {
-    name: "Regulatory Risk",
+    name: "Regulatory Operations",
     img: "/images/bfs-usecase-5.webp",
-    alt: "Regulatory Risk",
+    alt: "Regulatory operations",
     description:
-      "Automated regulatory monitoring and reporting reduce compliance burden while improving audit readiness across jurisdictions.",
+      "Organize regulatory information, reporting workflows, and compliance-related processes using data and intelligent automation.",
     bulletsTitle: "What It Delivers:",
     bullets: [
-      "Automated regulatory reporting",
-      "Improved audit readiness",
-      "Reduced compliance overhead",
+      "Structured regulatory workflows",
+      "Automated information processing",
+      "Improved reporting visibility",
     ],
   },
-
   {
-    name: "Model Risk Management",
+    name: "Model Monitoring",
     img: "/images/bfs-usecase-6.webp",
-    alt: "Model Risk Management",
+    alt: "AI model monitoring",
     description:
-      "Governed model validation and monitoring frameworks ensure AI and analytical models remain accurate, fair, and compliant over time.",
+      "Support the ongoing monitoring and documentation of analytical and AI models across business environments.",
     bulletsTitle: "What It Delivers:",
     bullets: [
-      "Continuous model monitoring",
-      "Bias and drift detection",
-      "Audit-ready model documentation",
+      "Model performance monitoring",
+      "Data and model validation workflows",
+      "Structured model documentation",
     ],
   },
 ];
 
 const CLIENTS = [
-  { icon: Landmark, title: "Banks", text: "Retail and small banks unlock AI and data analytics to optimize operations and drive smarter decision-making." },
-  { icon: Building2, title: "Commercial Banks", text: "We empower commercial banks with advanced analytics solutions to optimize credit risk assessment and drive data-driven decision-making." },
-  { icon: HandCoins, title: "Alternate Lenders", text: "We provide alternative lenders with data-driven risk modeling to enhance credit risk approval processes and automate compliance checks." },
-  { icon: Cpu, title: "FinTech Companies", text: "FinTech companies leverage our analytics to streamline operations, enhance customer insights, and drive real-time decisions." },
-  { icon: Wallet, title: "Asset Management", text: "We enable asset management firms to harness the power of data-driven insights for improved portfolio optimization and predictive market insights." },
-  { icon: Network, title: "Payment Processors & Networks", text: "We assist payment processors and networks by utilizing advanced analytics to optimize fraud detection and improve compliance management." },
+  {
+    icon: Landmark,
+    title: "Banks",
+    text: "Use AI, analytics, and automation to improve customer experiences, operations, risk management, and decision-making.",
+  },
+  {
+    icon: Building2,
+    title: "Commercial Banking",
+    text: "Apply data-driven solutions to support credit, customer analytics, operational workflows, and financial decision-making.",
+  },
+  {
+    icon: HandCoins,
+    title: "Lenders",
+    text: "Use analytics and intelligent workflows to support credit assessment, document processing, and operational processes.",
+  },
+  {
+    icon: Cpu,
+    title: "FinTech Companies",
+    text: "Build AI-enabled products and data solutions that support digital financial experiences and scalable operations.",
+  },
+  {
+    icon: Wallet,
+    title: "Asset Management",
+    text: "Use data and analytics to support investment operations, research, reporting, and portfolio-related workflows.",
+  },
+  {
+    icon: Network,
+    title: "Payments",
+    text: "Apply intelligent analytics and automation to payment operations, transaction monitoring, customer support, and risk workflows.",
+  },
 ];
 
 export default function BankingFinancialServices() {
   return (
     <>
       <IndustryHero
-        title="Transform Business with AI and Advanced Analytics"
-        subtitle="Banking and Financial Services"
+        title="AI & Data Solutions for Banking and Financial Services"
+        subtitle="Modernize financial operations with analytics, automation, and practical AI solutions."
         buttons={["Explore Solutions", "Book a Demo"]}
       />
 
       <IndustryBanner
-        heading="At Straive, we help banking and financial services organizations harness data and AI"
-        text="Our scalable solutions ensure compliance, mitigate risks, and deliver measurable business impact through decision-making, automation, and efficiency."
+        heading="Build Smarter Financial Services with AI and Data"
+        text="Work Science helps banking and financial services organizations transform data into useful intelligence while improving operational workflows through AI, analytics, and automation."
       />
 
-      <IconCardGrid heading="Straive's BFS Industry Solutions" items={SOLUTIONS} columns={4} />
+      <section id="solutions-section" className="scroll-mt-24">
+        <IconCardGrid
+          heading="Banking & Financial Services Solutions"
+          items={SOLUTIONS}
+          columns={4}
+        />
+      </section>
 
-      <ToolkitTabs heading="Use Cases" tabs={USE_CASES} />
+      <ToolkitTabs
+        heading="AI & Analytics Use Cases"
+        tabs={USE_CASES}
+      />
 
-      <IconCardGrid heading="Clients We Serve" items={CLIENTS} columns={3} bg="bg-[#f7f7f9]" />
+      <IconCardGrid
+        heading="Organizations We Support"
+        items={CLIENTS}
+        columns={3}
+        bg="bg-[#f7f7f9]"
+      />
 
-      <ContactForm />
+      <section id="contact-form" className="scroll-mt-24">
+        <ContactForm />
+      </section>
     </>
   );
 }

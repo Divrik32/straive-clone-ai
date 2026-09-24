@@ -91,12 +91,12 @@ Industries: {
         { label: "Awards", path: "/insights/awards" },
       ],
     ],
-    image: { img: "/images/menu-insights.webp", alt: "Insights and resources" },
+    image: { img: "/images/menu-insights.jpg", alt: "Insights and resources" },
   },
   "About Us": {
     type: "cards",
     cards: [
-      { label: "About us", img: "/images/menu-about-us.jpg", alt: "About Straive", path: "/about-us" },
+      { label: "About us", img: "/images/menu-about-us.webp", alt: "About Straive", path: "/about-us" },
       { label: "ESG", img: "/images/menu-esg.jpg", alt: "ESG at Straive", path: "/about-us/esg" },
       { label: "News", img: "/images/menu-news.jpg", alt: "Straive news", path: "/about-us/news" },
       { label: "Partnership", img: "/images/menu-partnership.jpg", alt: "Straive partnerships", path: "/about-us/partnership" },

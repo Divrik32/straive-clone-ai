@@ -13,35 +13,80 @@ const THEMES = {
   },
 };
 
-export default function AboutPageHero({ theme = "gold", eyebrow, title, subtitle, cta }) {
+export default function AboutPageHero({
+  theme = "gold",
+  eyebrow,
+  title,
+  subtitle,
+  cta,
+}) {
   const t = THEMES[theme] || THEMES.gold;
 
   return (
-    <section className="relative overflow-hidden text-white" style={{ background: t.bg }}>
-      <div className="absolute inset-0 opacity-60" style={{ backgroundImage: t.glow.replace(/_/g, " ") }} />
+    <section
+      className="relative overflow-hidden text-white"
+      style={{ background: t.bg }}
+    >
+      <div
+        className="absolute inset-0 opacity-60"
+        style={{
+          backgroundImage: t.glow.replace(/_/g, " "),
+        }}
+      />
+
       <div className="absolute inset-0 opacity-20">
-        {[...Array(3)].map((_, i) => (
-          <span
-            key={i}
-            className="absolute rounded-full bg-white/10"
-            style={{
-              width: 180 + i * 70,
-              height: 180 + i * 70,
-              top: `${5 + i * 18}%`,
-              right: `${2 + i * 12}%`,
-            }}
-          />
-        ))}
+        <span
+          className="absolute rounded-full bg-white/10"
+          style={{
+            width: 180,
+            height: 180,
+            top: "5%",
+            right: "2%",
+          }}
+        />
+
+        <span
+          className="absolute rounded-full bg-white/10"
+          style={{
+            width: 250,
+            height: 250,
+            top: "23%",
+            right: "14%",
+          }}
+        />
+
+        <span
+          className="absolute rounded-full bg-white/10"
+          style={{
+            width: 320,
+            height: 320,
+            top: "41%",
+            right: "26%",
+          }}
+        />
       </div>
 
       <div className="relative section-container py-20 md:py-28">
         {eyebrow && (
-          <span className="inline-block text-[11px] uppercase tracking-widest text-white/70 mb-3">{eyebrow}</span>
+          <span className="inline-block text-[11px] uppercase tracking-widest text-white/70 mb-3">
+            {eyebrow}
+          </span>
         )}
-        <h1 className="text-3xl md:text-5xl font-semibold max-w-2xl leading-tight mb-4">{title}</h1>
-        {subtitle && <p className="text-sm md:text-base text-white/75 max-w-xl mb-8">{subtitle}</p>}
+
+        <h1 className="text-3xl md:text-5xl font-semibold max-w-2xl leading-tight mb-4">
+          {title}
+        </h1>
+
+        {subtitle && (
+          <p className="text-sm md:text-base text-white/75 max-w-xl mb-8">
+            {subtitle}
+          </p>
+        )}
+
         {cta && (
-          <button className="btn-pill btn-orange text-[11px] px-6 py-3 uppercase">{cta}</button>
+          <button className="btn-pill btn-orange text-[11px] px-6 py-3 uppercase">
+            {cta}
+          </button>
         )}
       </div>
     </section>

@@ -1,4 +1,9 @@
-import { Play, FlaskConical, Factory, ClipboardCheck, LineChart } from "lucide-react";
+import {
+  FlaskConical,
+  Factory,
+  ClipboardCheck,
+  LineChart,
+} from "lucide-react";
 import IndustryHero from "../../components/industrypage/IndustryHero";
 import ServiceIntro from "../../components/servicepage/ServiceIntro";
 import IconCardGrid from "../../components/servicepage/IconCardGrid";
@@ -11,109 +16,171 @@ const OFFERINGS = [
   {
     name: "Data & Domain Strategy",
     description:
-      "We deliver tailored data strategies that align with your pharma goals, maximizing data potential across R&D, clinical trials, and market access. Our pharma expertise ensures you identify key data assets, creating robust frameworks for data governance and AI-driven insights to drive growth, innovation, and competitive advantage.",
+      "Build a structured data foundation across research, clinical, regulatory, manufacturing, and commercial processes to support analytics and AI initiatives.",
     bulletsTitle: "What It Delivers:",
     bullets: [
-      "Aligned data strategy across R&D and commercial",
-      "Governed, AI-ready data foundations",
+      "Connected data strategy",
+      "Governed and analytics-ready data",
     ],
     img: "/images/data-domain-strategy.webp",
   },
-
   {
     name: "Advanced & Generative AI",
     description:
-      "GenAI-powered models accelerate drug discovery, regulatory document generation, and market intelligence with domain-tuned language models.",
+      "Apply generative AI and intelligent automation to information-heavy pharmaceutical workflows such as research, documentation, knowledge access, and business operations.",
     bulletsTitle: "What It Delivers:",
     bullets: [
-      "Faster discovery and document cycles",
-      "Domain-specific, compliant AI outputs",
+      "AI-assisted knowledge workflows",
+      "Faster information processing",
     ],
     img: "/images/advanced-generative-ai.webp",
   },
-
   {
-    name: "Data Curation & Digitized Operations",
+    name: "Data Curation & Digital Operations",
     description:
-      "We curate, clean, and digitize pharma data across clinical, regulatory, and commercial operations to enable trustworthy, analytics-ready datasets.",
+      "Clean, organize, structure, and digitize pharmaceutical data to create reliable information for analytics, reporting, and business workflows.",
     bulletsTitle: "What It Delivers:",
     bullets: [
-      "Clean, audit-ready datasets",
-      "Digitized end-to-end operations",
+      "Structured and reliable datasets",
+      "Digitized business processes",
     ],
     img: "/images/data-curation-digitized-operations.webp",
   },
-
   {
-    name: "Automation & Digital Ops",
+    name: "Automation & Digital Operations",
     description:
-      "Intelligent automation streamlines repetitive regulatory, quality, and commercial operations workflows, freeing teams for higher-value work.",
+      "Automate repetitive regulatory, quality, commercial, and operational processes while keeping appropriate human review within important workflows.",
     bulletsTitle: "What It Delivers:",
     bullets: [
-      "Reduced manual processing time",
-      "Consistent, compliant workflows",
+      "Reduced repetitive processing",
+      "Consistent operational workflows",
     ],
     img: "/images/automation-digital-ops.webp",
   },
 ];
 
-
 const VALUE_CHAIN = [
-  { icon: FlaskConical, title: "Research and Development", text: "Accelerate drug discovery, clinical trial design, and research data curation with AI-powered pipelines." },
-  { icon: Factory, title: "Manufacturing & Supply Chain", text: "Digital twins, yield improvement strategies, and predictive supply chain management." },
-  { icon: ClipboardCheck, title: "Regulatory Affairs Services", text: "AI-assisted solutions for regulatory affairs, document management, and labeling service enhancements." },
-  { icon: LineChart, title: "Commercial and Market Strategy", text: "Tools for market adaptability, pricing automation, and personalized sales and marketing strategies." },
+  {
+    icon: FlaskConical,
+    title: "Research & Development",
+    text: "Use AI, analytics, and data processing to support research information management, scientific workflows, and knowledge discovery.",
+  },
+  {
+    icon: Factory,
+    title: "Manufacturing & Supply Chain",
+    text: "Apply analytics and automation to manufacturing information, supply planning, operational monitoring, and supply chain workflows.",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Regulatory Operations",
+    text: "Use intelligent document processing and automation to organize regulatory information and support document-heavy workflows.",
+  },
+  {
+    icon: LineChart,
+    title: "Commercial & Market Intelligence",
+    text: "Transform commercial and market data into useful insights for reporting, planning, customer understanding, and decision support.",
+  },
 ];
 
 const CASE_STUDIES = [
-  { title: "Accuracy by 95%: Modernizing Monograph for Global Pharmaceuticals", img: "/images/pharma-case-1.webp" },
-  { title: "Cutting Costs by 6.5% While Shrinking Carbon Footprint: A Pharma Success in EMEA Distribution", img: "/images/pharma-case-2.webp" },
-  { title: "Saving $5.2M Annually: Advanced NLP Revolutionized Drug Labeling for Regulatory Affairs", img: "/images/pharma-case-3.webp" },
+  {
+    title: "Modernizing Pharmaceutical Data and Document Workflows",
+    img: "/images/pharma-case-1.webp",
+  },
+  {
+    title: "Using Analytics to Improve Pharmaceutical Supply Operations",
+    img: "/images/pharma-case-2.webp",
+  },
+  {
+    title: "AI-Assisted Document Intelligence for Life Sciences",
+    img: "/images/pharma-case-3.webp",
+  },
 ];
 
 const FAQS = [
-  { q: "How does Straive's Pharma Analytics enhance decision-making in the pharmaceutical industry?", a: "Straive leverages advanced analytics, AI, and Machine Learning to transform complex pharmaceutical data into actionable insights. This empowers decision-makers with more timely, data-driven intelligence, leading to more informed strategic choices across the pharma value chain." },
-  { q: "What benefits can pharma companies expect from adopting Straive's AI-driven solutions?", a: "Faster time-to-insight, reduced manual effort, improved regulatory compliance, and measurable cost savings across R&D, manufacturing, and commercial operations." },
-  { q: "How does Straive help in reducing operational costs for pharmaceutical companies?", a: "Through automation of repetitive workflows, curated and digitized data operations, and AI-driven process optimization across the value chain." },
-  { q: "Can Straive's solutions be scaled to adapt to changing business needs in the pharma industry?", a: "Yes, our modular data and AI architecture is designed to scale across new therapeutic areas, markets, and regulatory environments." },
-  { q: "How does Straive ensure compliance with industry regulations through its pharma analytics solutions?", a: "We embed regulatory and quality requirements directly into our data governance and AI validation frameworks from the outset." },
+  {
+    q: "How can AI and analytics support pharmaceutical companies?",
+    a: "AI and analytics can help pharmaceutical organizations process information, automate repetitive workflows, organize research and regulatory data, and create better visibility across business operations.",
+  },
+  {
+    q: "Where can generative AI be used in life sciences?",
+    a: "Generative AI can support knowledge search, document summarization, content generation, information extraction, research assistance, and other information-heavy workflows.",
+  },
+  {
+    q: "How does data curation help pharmaceutical organizations?",
+    a: "Data curation helps clean, organize, standardize, and structure information so that it can be used more reliably for analytics, reporting, and AI applications.",
+  },
+  {
+    q: "Can AI solutions be integrated with existing pharmaceutical systems?",
+    a: "AI solutions can be designed to integrate with existing applications, databases, documents, APIs, and business workflows depending on the organization's technical environment and requirements.",
+  },
+  {
+    q: "How can automation improve pharmaceutical operations?",
+    a: "Automation can reduce repetitive manual processing, connect business systems, improve information flow, and allow teams to focus more on tasks that require human expertise and review.",
+  },
 ];
 
 export default function PharmaLifeSciences() {
   return (
     <>
       <IndustryHero
-        title="Scale your Pharma Value Chain with GenAI-Powered Insights and Automation"
-        buttons={["Case Studies", "Book a Demo"]}
+        title="AI & Data Solutions for Pharma and Life Sciences"
+        subtitle="Use AI, analytics, automation, and intelligent data workflows across the life sciences value chain."
+        buttons={["Explore Solutions", "Book a Demo"]}
       />
 
       <ServiceIntro
-        heading="Bridge the GenAI Divide with End-to-End AI Operationalization"
-        body="While AI has the power to redefine pharma - accelerating discovery, transforming operations, and raising the bar on impact - a full divide between early pilots and enterprise-scale impact lags the GenAI Divide: stalled initiatives, fragmented 'build vs. buy' projects, and ROI that never materializes. Straive bridges that divide. As a full-stack partner in AI Operationalization, we bring together advisory, design, deployment, and product engineering to embed GenAI across the pharma value chain - from research and clinical development to manufacturing, and commercial strategy. The outcome: accelerated innovation, measurable ROI, and durable transformation across the enterprise."
+        heading="Modernize Pharma and Life Sciences with AI"
+        body="Pharmaceutical and life sciences organizations manage complex information across research, clinical, regulatory, manufacturing, and commercial operations. Work Science helps transform these information-heavy processes with data engineering, AI, analytics, intelligent automation, and digital workflows."
       />
 
       <section className="bg-white pb-14">
         <div className="section-container max-w-2xl mx-auto">
           <div className="relative h-56 rounded-lg overflow-hidden">
-            <iframe className="w-full h-full" src="https://www.youtube.com/embed/QoUlq5Jino4" title="Manufacturing, Sales & Marketing, Distribution & Operations" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen ></iframe>
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/QoUlq5Jino4"
+              title="AI and Data Solutions for Life Sciences"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>
 
-      <ToolkitTabs heading="Our Core Pharma Offerings" tabs={OFFERINGS} />
+      <section id="solutions-section" className="scroll-mt-24">
+        <ToolkitTabs
+          heading="Our Pharma & Life Sciences Solutions"
+          tabs={OFFERINGS}
+        />
+      </section>
 
-      <IconCardGrid heading="Key Solutions Across the Pharma Value Chain" items={VALUE_CHAIN} columns={4} bg="bg-[#f7f7f9]" />
+      <IconCardGrid
+        heading="Solutions Across the Life Sciences Value Chain"
+        items={VALUE_CHAIN}
+        columns={4}
+        bg="bg-[#f7f7f9]"
+      />
 
-      <CaseStudyGrid heading="Case Studies" items={CASE_STUDIES} columns={3} />
+      <CaseStudyGrid
+        heading="AI & Data Use Cases in Life Sciences"
+        items={CASE_STUDIES}
+        columns={3}
+      />
 
       <section className="bg-white pb-16">
         <div className="section-container">
-          <h2 className="text-xl md:text-2xl font-semibold text-[#10162B] text-center mb-8">Frequently Asked Questions (FAQs)</h2>
+          <h2 className="text-xl md:text-2xl font-semibold text-[#10162B] text-center mb-8">
+            Frequently Asked Questions
+          </h2>
           <FAQAccordion faqs={FAQS} />
         </div>
       </section>
 
-      <ContactForm />
+      <section id="contact-form" className="scroll-mt-24">
+        <ContactForm />
+      </section>
     </>
   );
 }

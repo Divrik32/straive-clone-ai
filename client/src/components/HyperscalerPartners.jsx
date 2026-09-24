@@ -24,15 +24,19 @@ const TECHNOLOGIES = [
 ];
 
 export default function HyperscalerPartners() {
+  const safeTechnologies = Array.isArray(TECHNOLOGIES)
+    ? TECHNOLOGIES
+    : [];
+
   return (
     <section className="bg-white pb-16">
       <div className="section-container text-center">
         <h2 className="text-xl md:text-2xl font-semibold text-[#10162B] mb-10">
-          Built for the Modern AI Ecosystem
+          Built for the Modern Technology Ecosystem
         </h2>
 
         <div className="flex flex-wrap justify-center items-center gap-x-14 gap-y-8">
-          {TECHNOLOGIES.map(({ icon: Icon, name, sub }) => (
+          {safeTechnologies.map(({ icon: Icon, name, sub }) => (
             <div key={name} className="flex items-center gap-2">
               <div className="w-9 h-9 rounded-full bg-[#10162B]/5 flex items-center justify-center">
                 <Icon className="w-4 h-4 text-brand-orange" />

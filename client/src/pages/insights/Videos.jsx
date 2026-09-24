@@ -2,24 +2,100 @@ import InsightsHero from "../../components/insightspage/InsightsHero";
 import VideoCardGrid from "../../components/insightspage/VideoCardGrid";
 
 const VIDEOS = [
-  { title: "Leadership Talks: Recouping AI Investments \u2014 Lower Costs, Higher Returns | Namit Sureka", excerpt: "Straive's President & Chief Analytics and AI Officer, Namit Sureka, explains how smart GenAI investments drive rapid ROI, cost...", img: "/images/vid-1.svg", videoUrl: "https://www.youtube.com/embed/9FQcN5QFSu8" },
-  { title: "Straive at AIFS 2025: Operationalizing AI in Customer Experience & Compliance", excerpt: "At AIFS 2025, Straive's CEO Ankor Rai discusses how AI enhances customer experience and compliance through real-time...", img: "/images/vid-2.svg", videoUrl: "https://www.youtube.com/embed/VtFPCzQ8nUQ" },
-  { title: "Leadership Talks: Why the Human-in-the-Loop Is Key to Operationalizing AI | Straive", excerpt: "Straive's President and Chief Analytics & AI Officer, Namit Sureka, shares expertise around how human-in-the-loop...", img: "/images/vid-3.svg", videoUrl: "https://www.youtube.com/embed/LZGXvyXuak0" },
-  { title: "When Ops and AI Agents Work Together", excerpt: "How integrating generative AI systems into ops and AI agents drive scalable...", img: "/images/vid-4.svg", videoUrl: "https://www.youtube.com/embed/ukkjRXeNMdM" },
-  { title: "Revolutionize Your Customer Experience with AI-powered CX Solutions | Straive", excerpt: "Discover how Straive's AI-powered CX solutions elevate customer interactions through intelligent automation, real-time...", img: "/images/vid-5.svg", videoUrl: "https://www.youtube.com/embed/WAefyDAW6RY" },
-  { title: "Why 20% Impact Beats 100% Perfection in AI | Straive", excerpt: "Ankor Rai, CEO of Straive, explains why prioritizing the top 20% of AI initiatives delivers measurable outcomes...", img: "/images/vid-6.svg", videoUrl: "https://www.youtube.com/embed/rMgo8t-0gik" },
-  { title: "The Rise of GenAI", excerpt: "This clip highlights how enterprise AI adoption and pilots are evolving into scale, agility, supply chain...", img: "/images/vid-7.svg", videoUrl: "https://www.youtube.com/embed/ukkjRXeNMdM" },
-  { title: "GenAI for Enterprises with Naveen Gattu", excerpt: "Naveen Gattu reveals how GenAI is revolutionizing business operations, moving from pilots to scale in weeks.", img: "/images/vid-8.svg", videoUrl: "https://www.youtube.com/embed/FbrNgpG2i_k" },
-  { title: "AI for Impact Ep 2: LLMs Tech Dilemma with Anand S", excerpt: "Anand S, Straive's Head of LLM Psychologist, intriguing notion that the world's LLM Language...", img: "/images/vid-9.svg", videoUrl: "https://www.youtube.com/embed/FbrNgpG2i_k" },
-  { title: "Straive Forward \u2014 Chief Analytics Officer", excerpt: "Something big is coming... Stay tuned! We've been working on something behind the scenes and we're almost ready to reveal it...", img: "/images/vid-10.svg", videoUrl: "https://www.youtube.com/embed/t214j8xRZSo" },
-  { title: "State of ESG Data Processes & Automation", excerpt: "How ESG solutions powered by end-to-end unstructured data platform (SDP) accelerate automation.", img: "/images/vid-11.svg", videoUrl: "https://www.youtube.com/embed/5mGfKgaiUAA" },
-  { title: "Straive Digital Accessibility Overview \u2014 Digital Web Accessibility", excerpt: "Digital Web Accessibility or Accessibility means creating content that can be used by all. Find out why and how Straive has...", img: "/images/vid-12.svg", videoUrl: "https://www.youtube.com/embed/S4OnyQcReyM" },
+  {
+    title: "Leadership Talks: Recouping AI Investments — Lower Costs, Higher Returns",
+    excerpt:
+      "Explore how thoughtful AI investments can improve operational efficiency, reduce costs, and create measurable business value.",
+    img: "/images/vid-1.svg",
+    videoUrl: "https://www.youtube.com/embed/1rl6HZbqbOY",
+  },
+  {
+    title: "Operationalizing AI in Customer Experience & Compliance",
+    excerpt:
+      "Explore how AI can enhance customer experience, compliance, and operational decision-making through intelligent automation.",
+    img: "/images/vid-2.svg",
+    videoUrl: "https://www.youtube.com/embed/iy4ZgO_-bC4",
+  },
+  {
+    title: "Why the Human-in-the-Loop Is Key to Operationalizing AI",
+    excerpt:
+      "Understand how human expertise and AI systems can work together to improve reliability, governance, and business outcomes.",
+    img: "/images/vid-3.svg",
+    videoUrl: "https://www.youtube.com/embed/iy4ZgO_-bC4",
+  },
+  {
+    title: "When Operations and AI Agents Work Together",
+    excerpt:
+      "Explore how generative AI systems and intelligent agents can work alongside operations teams to support scalable workflows.",
+    img: "/images/vid-4.svg",
+    videoUrl: "https://www.youtube.com/embed/sWH0T4Zez6I",
+  },
+  {
+    title: "Revolutionize Customer Experience with AI-Powered CX Solutions",
+    excerpt:
+      "Discover how AI-powered customer experience solutions can improve interactions through intelligent automation and real-time insights.",
+    img: "/images/vid-5.svg",
+    videoUrl: "https://www.youtube.com/embed/a-8d2beV8w0",
+  },
+  {
+    title: "Why Focused AI Initiatives Can Create Business Impact",
+    excerpt:
+      "Explore how organizations can prioritize AI initiatives around practical business outcomes and measurable value.",
+    img: "/images/vid-6.svg",
+    videoUrl: "https://www.youtube.com/embed/4l9_RMRNMPQ",
+  },
+  {
+    title: "The Rise of GenAI",
+    excerpt:
+      "Explore how enterprise AI adoption is evolving from experimentation and pilots toward scalable implementation.",
+    img: "/images/vid-7.svg",
+    videoUrl: "https://www.youtube.com/embed/sWH0T4Zez6I",
+  },
+  {
+    title: "GenAI for Enterprises with Naveen Gattu",
+    excerpt:
+      "Explore how generative AI is changing business operations and helping organizations move from pilots toward enterprise scale.",
+    img: "/images/vid-8.svg",
+    videoUrl: "https://www.youtube.com/embed/3fN49nVQmYU",
+  },
+  {
+    title: "AI for Impact: LLM Technology and Business",
+    excerpt:
+      "Explore the evolving role of large language models and the opportunities and challenges they create for organizations.",
+    img: "/images/vid-9.svg",
+    videoUrl: "https://www.youtube.com/embed/3fN49nVQmYU",
+  },
+  {
+    title: "Work Science Forward — Chief Analytics Officer",
+    excerpt:
+      "Explore perspectives on the future of analytics, AI, digital transformation, and intelligent business operations.",
+    img: "/images/vid-10.svg",
+    videoUrl: "https://www.youtube.com/embed/MijKdmvHQv0",
+  },
+  {
+    title: "State of ESG Data Processes & Automation",
+    excerpt:
+      "Explore how ESG data platforms and automation can improve sustainability reporting and operational processes.",
+    img: "/images/vid-11.svg",
+    videoUrl: "https://www.youtube.com/embed/SHDR2MDwBSY",
+  },
+  {
+    title: "Digital Accessibility Overview — Digital Web Accessibility",
+    excerpt:
+      "Explore digital accessibility and understand how organizations can create content and experiences that are usable by everyone.",
+    img: "/images/vid-12.svg",
+    videoUrl: "https://www.youtube.com/embed/g53xa-ICcQ4",
+  },
 ];
 
 export default function Videos() {
   return (
     <>
-      <InsightsHero title="Videos" img="/images/insights-hero-videos.jpg" />
+      <InsightsHero
+        title="Videos"
+        img="/images/insights-hero-videos.jpg"
+      />
+
       <VideoCardGrid items={VIDEOS} />
     </>
   );

@@ -10,11 +10,12 @@ export default function ContactForm() {
 
   const [agree, setAgree] = useState(false);
 
-  const handleChange = (e) =>
+  const handleChange = (e) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -103,8 +104,8 @@ export default function ContactForm() {
 
           <p className="text-[10px] text-[#7a7a8a] leading-relaxed">
             By submitting this form, you agree that Work Science may use the
-            information provided to respond to your inquiry and discuss relevant
-            products or services.
+            information provided to respond to your inquiry and discuss
+            relevant products or services.
           </p>
 
           <label className="flex items-center gap-2 text-[11px] text-[#4a4a5a]">

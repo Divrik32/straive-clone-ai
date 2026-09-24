@@ -20,7 +20,7 @@ export default function Navbar() {
     >
       <div className="section-container flex h-[64px] items-center justify-between">
         {/* Logo */}
-<a href="/" className="flex items-center gap-2 shrink-0"> <img src="images/company-logo.jpg" alt="Work Science logo" className="w-8 h-8 object-contain" /> <span className="text-xl font-bold tracking-tight"> <span className="text-blue-600">Work</span>{" "} <span className="text-brand-orange">Science</span> </span> </a>
+<a href="/" className="flex items-center gap-2 shrink-0"> <img src="/images/company-logo.jpg" alt="Work Science logo" className="w-8 h-8 object-contain" /> <span className="text-xl font-bold tracking-tight"> <span className="text-blue-600">Work</span>{" "} <span className="text-brand-orange">Science</span> </span> </a>
 
         {/* Nav + right actions grouped together: this wrapper's own edges define the
             exact left/right bounds of the mega menu dropdown below (from "Services"

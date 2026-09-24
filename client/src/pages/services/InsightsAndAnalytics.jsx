@@ -1,4 +1,3 @@
-import { Landmark, Rocket } from "lucide-react";
 import ServiceHero from "../../components/servicepage/ServiceHero";
 import ServiceIntro from "../../components/servicepage/ServiceIntro";
 import ImpactCards from "../../components/servicepage/ImpactCards";
@@ -9,61 +8,131 @@ import OfferingHighlights from "../../components/servicepage/OfferingHighlights"
 import ThoughtLeadership from "../../components/ThoughtLeadership";
 import CTABanner from "../../components/CTABanner";
 
-const TABS = ["Data Management", "Insights & Analytics", "AI Design & Deployment", "Product Engg. & Ops"];
+const TABS = [
+  "Data Management",
+  "Insights & Analytics",
+  "AI Design & Deployment",
+  "Product Engg. & Ops",
+];
 
 const CASE_CARDS = [
   {
-    title: "Revolutionized Michigan's education data system, saving $56M annually",
-    text: "A unified, AI-powered analytics platform replaced fragmented reporting systems, cutting costs and improving data-driven decision-making statewide.",
+    title: "Turn complex business data into actionable insights",
+    text: "Work Science helps organizations bring data together, identify meaningful patterns, and create analytics solutions that support faster and better business decisions.",
     bg: "bg-pink-100",
-    icon: Landmark,
     img: "/images/impact-education.jpg",
   },
   {
-    title: "Improved targeted user engagements",
-    text: "Behavioral analytics and predictive modeling helped a media platform increase engagement through precisely targeted content recommendations.",
+    title: "Improve customer and operational intelligence",
+    text: "Analytics, dashboards, and predictive models help teams understand customer behavior, monitor operations, and identify opportunities for improvement.",
     bg: "bg-emerald-100",
-    icon: Rocket,
     img: "/images/impact-user-engagement.jpg",
   },
 ];
 
-const CAPABILITIES = ["BI Reporting & Visualization", "Advanced Analytics & Modeling", "Text & Data Mining", "Domain-Specific Accelerators"];
+const CAPABILITIES = [
+  "Business Intelligence & Reporting",
+  "Data Visualization & Dashboards",
+  "Advanced Analytics & Modeling",
+  "Predictive Analytics",
+  "Data Mining & Pattern Analysis",
+  "AI-Powered Decision Support",
+];
 
 const ACCELERATORS = [
-  { name: "Spark AI", sub: "IDP Platform", color: "#3b82f6" },
-  { name: "LLM Foundry", sub: "Data Playground", color: "#f59e0b" },
-  { name: "Gramener", sub: "Data Manage", color: "#8b5cf6" },
+  {
+    name: "Analytics Engine",
+    sub: "Business Intelligence",
+    color: "#3b82f6",
+  },
+  {
+    name: "AI Insights",
+    sub: "Intelligent Analytics",
+    color: "#f59e0b",
+  },
+  {
+    name: "Data Intelligence",
+    sub: "Data & Analytics",
+    color: "#8b5cf6",
+  },
 ];
 
 const INDUSTRIES = [
-  { name: "Science & Research", text: "The exponential growth of complex research data, siloed knowledge across institutions, and the increasing pressure to accelerate breakthrough discoveries are some of the key challenges faced by businesses in this domain." },
-  { name: "Logistics & Supply Chain", text: "Transform fragmented operational data into a single source of truth that powers real-time visibility and predictive planning." },
-  { name: "EdTech", text: "Turn learning behavior data into actionable insights that improve outcomes and personalize the learning journey." },
-  { name: "Financial & Information Services", text: "Deliver accurate, compliant, and audit-ready reporting across financial and information products." },
-  { name: "Pharma & Life Sciences", text: "Accelerate research and regulatory decisions with analytics-ready, governed clinical data." },
-  { name: "Retail Tech, Entertainment & Media", text: "Unlock audience and consumer insight at scale to power personalization and growth." },
+  {
+    name: "Banking & Finance",
+    text: "Use business intelligence, predictive analytics, and data visualization to improve financial reporting, customer insights, operational monitoring, and decision-making.",
+  },
+  {
+    name: "Logistics & Supply Chain",
+    text: "Transform operational data into real-time visibility, performance insights, demand forecasting, and predictive planning.",
+  },
+  {
+    name: "Education",
+    text: "Analyze learning and operational data to understand learner behavior, improve engagement, and support data-driven educational decisions.",
+  },
+  {
+    name: "Healthcare & Life Sciences",
+    text: "Bring together complex operational and research data to support reporting, analytics, workflow optimization, and informed decision-making.",
+  },
+  {
+    name: "Retail & E-commerce",
+    text: "Understand customer behavior, product performance, and business trends through analytics and actionable customer insights.",
+  },
+  {
+    name: "Technology & Professional Services",
+    text: "Use analytics to monitor business performance, understand operational trends, and identify opportunities for automation and process improvement.",
+  },
 ];
 
 const HIGHLIGHTS = [
-  { title: "Insights as Stories", text: "200+ global clients experiencing decision-making analytics that resonate with every stakeholder.", bg: "bg-emerald-50" },
-  { title: "Visual Analytics for Actionable Insights", text: "1,400+ analytics applications built, empowering data interpretation, improved efficiency.", bg: "bg-amber-50" },
+  {
+    title: "Insights That Drive Decisions",
+    text: "Transform complex datasets into clear dashboards, reports, and insights that business teams can use in their everyday decision-making.",
+    bg: "bg-emerald-50",
+  },
+  {
+    title: "AI-Powered Analytics",
+    text: "Combine analytics, automation, and AI capabilities to identify patterns, surface useful information, and support faster business decisions.",
+    bg: "bg-amber-50",
+  },
 ];
 
 export default function InsightsAndAnalytics() {
   return (
     <>
-      <ServiceHero title="Insights & Analytics" subtitle="Transform data into actionable insights." tabs={TABS} activeTab={1} />
-      <ServiceIntro
-        heading="Bridge the gap between data and value"
-        body="Your business is inundated with data, but insights making sense of it remain elusive. At Straive, we make it easy to unlock the true, actionable potential of your data by transforming complex datasets into clear, contextual, and decision-ready insights across your value chain, by ensuring you extract the right resolution for the risks that lie ahead of your business."
+      <ServiceHero
+        title="Insights & Analytics"
+        subtitle="Transform business data into actionable insights."
+        tabs={TABS}
+        activeTab={1}
       />
-      <ImpactCards heading="Delivering impact with our services" cards={CASE_CARDS} />
-      <CapabilitiesList heading="Services that augment your data analytics capabilities" items={CAPABILITIES} />
-      <AcceleratorsRow heading="Accelerate your journey to value with pre-built accelerators" accelerators={ACCELERATORS} />
+
+      <ServiceIntro
+        heading="Turn data into clear, actionable business intelligence"
+        body="Organizations generate data across applications, customers, operations, and business processes. Work Science helps transform that data into meaningful insights through business intelligence, visualization, advanced analytics, predictive modeling, and AI-powered decision support."
+      />
+
+      <ImpactCards
+        heading="Delivering value through data and analytics"
+        cards={CASE_CARDS}
+      />
+
+      <CapabilitiesList
+        heading="Analytics capabilities for modern businesses"
+        items={CAPABILITIES}
+      />
+
+      <AcceleratorsRow
+        heading="Accelerate your analytics journey"
+        accelerators={ACCELERATORS}
+      />
+
       <IndustryTabs industries={INDUSTRIES} />
+
       <OfferingHighlights highlights={HIGHLIGHTS} />
+
       <ThoughtLeadership />
+
       <CTABanner />
     </>
   );

@@ -1,8 +1,5 @@
 import { useState } from "react";
 import {
-  Award,
-  Trophy,
-  ShieldCheck,
   Target,
   Boxes as BoxesIcon,
   Bot,
@@ -17,52 +14,58 @@ import {
 import ToolkitTabs from "../../components/servicepage/ToolkitTabs";
 import HyperscalerPartners from "../../components/HyperscalerPartners";
 
-const AWARDS = [
-  { icon: Trophy, title: "AI Breakthrough Award", sub: "Recognized for Agentic AI Breakthrough" },
-  { icon: Award, title: "Leader in 2025 PEMa Quadrant", sub: "Agentic AI Service Providers, AIM Research" },
-  { icon: ShieldCheck, title: "Responsible AI Recognition", sub: "Nasscom AI Game Changer Awards" },
-];
-
 const TOOLKIT_TABS = [
   {
-    name: "DocExplore",
+    name: "Document AI Agents",
     description:
-      "Unstructured documents contain valuable insights, but extracting them is often slow and inefficient. DocExplore leverages NLP for intelligent classification, ML and LLMs to automate analysis, and Semantic Search & Graph Analytics for deep contextual insights across agentic workflows.",
+      "AI agents can work with large volumes of business documents to classify information, extract relevant details, summarize content, and support document-heavy workflows. Work Science combines AI models with intelligent processing to turn unstructured information into useful business actions.",
     bulletsTitle: "What It Does:",
     bullets: [
-      "AI-driven document processing \u2014 Ingest, classify, and analyze large volumes of text.",
-      "Topic & entity extraction \u2014 Identify key themes, people, and organizations.",
-      "Contextual search & visualization \u2014 Go beyond keywords with AI-powered insights.",
+      "Process and classify large volumes of business documents.",
+      "Extract entities, topics, and relevant business information.",
+      "Generate summaries and insights from unstructured content.",
     ],
     img: "/images/toolkit-docexplore.webp",
-    alt: "DocExplore toolkit preview",
+    alt: "Document AI agents toolkit",
   },
   {
-    name: "Conversational Search/Chat",
+    name: "Conversational AI Agents",
     description:
-      "Autonomous agents that understand natural-language requests and resolve them end-to-end, escalating to humans only when judgment or approval is required.",
+      "Conversational AI agents allow users to interact with business information and applications using natural language. They can answer questions, perform supported tasks, and hand over complex requests when human involvement is required.",
     bulletsTitle: "What It Does:",
-    bullets: ["Natural-language task routing and resolution.", "Context-aware, multi-turn conversations.", "Seamless human-in-the-loop handoff."],
+    bullets: [
+      "Natural-language conversations with business users.",
+      "Context-aware responses across multi-turn conversations.",
+      "Human handoff for tasks that require review or approval.",
+    ],
     img: "/images/toolkit-conversational-search.webp",
-    alt: "Conversational Search and Chat toolkit preview",
+    alt: "Conversational AI agents toolkit",
   },
   {
-    name: "LLM Foundry",
+    name: "AI Agent Workspace",
     description:
-      "The model-agnostic backbone powering every Straive agent \u2014 rapid prototyping, evaluation, and governed deployment across model providers.",
+      "Create, test, and refine AI agent workflows around specific business requirements. Teams can experiment with agent instructions, tools, workflows, and model configurations before integrating them into production applications.",
     bulletsTitle: "What It Does:",
-    bullets: ["Rapid prototyping across leading model providers.", "Built-in evaluation and benchmarking.", "One-click deployment into governed environments."],
+    bullets: [
+      "Design AI agent workflows for specific business processes.",
+      "Test agent behavior and refine instructions and workflows.",
+      "Connect agents with applications, data, and business tools.",
+    ],
     img: "/images/toolkit-llm-foundry.jpg",
-    alt: "LLM Foundry toolkit preview",
+    alt: "AI agent workspace",
   },
   {
-    name: "App Maker",
+    name: "AI Workflow Builder",
     description:
-      "Compose multi-agent applications from reusable building blocks, without writing code, so business teams can move from idea to autonomous workflow in days.",
+      "Build intelligent workflows by combining AI agents, business rules, data sources, and software integrations. This enables organizations to automate multi-step processes while keeping human oversight where it is needed.",
     bulletsTitle: "What It Does:",
-    bullets: ["Drag-and-drop agent composition.", "Reusable component library across use cases.", "Enterprise-grade governance built in."],
+    bullets: [
+      "Combine AI agents with business workflows and applications.",
+      "Automate multi-step operational processes.",
+      "Support human-in-the-loop approvals and decision points.",
+    ],
     img: "/images/toolkit-app-maker.jpg",
-    alt: "App Maker toolkit preview",
+    alt: "AI workflow builder",
   },
 ];
 
@@ -70,66 +73,166 @@ const USE_CASE_TABS = [
   {
     name: "Financial Services",
     description:
-      "Agentic AI brings automation and resilience across financial fraud, ensuring compliance, and reducing risk with reduced false positives.",
+      "Agentic AI can support financial workflows by automating information processing, customer interactions, document handling, and operational tasks while keeping appropriate human review in place.",
     bulletsTitle: "What It Does:",
-    bullets: ["Automated fraud monitoring at scale.", "Reduced false positives across risk workflows.", "Faster, compliant decisioning."],
+    bullets: [
+      "Automate repetitive financial operations.",
+      "Support customer and employee service workflows.",
+      "Process documents and information for operational teams.",
+    ],
     img: "/images/usecase-financial-services.webp",
-    alt: "Financial Services agentic AI use case",
+    alt: "Financial services AI agent use case",
   },
   {
     name: "Logistics & Supply Chain",
-    description: "Autonomous agents streamline vendor management, shipment tracking, and exception handling across complex logistics networks.",
+    description:
+      "AI agents can coordinate information across logistics workflows, helping teams process vendor information, monitor operational events, and manage routine exceptions.",
     bulletsTitle: "What It Does:",
-    bullets: ["Multi-format vendor data processing.", "Automated shortlisting and qualification for tenders.", "Faster, reliable insights for managers."],
+    bullets: [
+      "Process vendor and operational information.",
+      "Support shipment and workflow monitoring.",
+      "Assist teams with routine exception-handling tasks.",
+    ],
     img: "/images/usecase-logistics-supply-chain.png",
-    alt: "Logistics and Supply Chain agentic AI use case",
+    alt: "Logistics and supply chain AI agent use case",
   },
   {
-    name: "Pharma & Life Sciences",
-    description: "Agents accelerate adverse event detection and regulatory reporting while maintaining full auditability across clinical workflows.",
+    name: "Healthcare & Life Sciences",
+    description:
+      "AI agents can assist information-heavy healthcare and life sciences workflows by organizing documents, extracting relevant information, and supporting research and operational processes.",
     bulletsTitle: "What It Does:",
-    bullets: ["Automated detection of adverse events from trial data.", "Multi-agent LLM workflow validation.", "Pharmacovigilance-ready reports for regulators."],
+    bullets: [
+      "Extract information from complex documents.",
+      "Support research and knowledge workflows.",
+      "Assist teams with structured information processing.",
+    ],
     img: "/images/usecase-pharma-life-sciences.jpg",
-    alt: "Pharma and Life Sciences agentic AI use case",
+    alt: "Healthcare and life sciences AI agent use case",
   },
   {
     name: "Science & Research",
-    description: "Research teams use agentic workflows to accelerate literature review, hypothesis generation, and data synthesis.",
+    description:
+      "Research teams can use AI agents to organize literature, summarize information, identify relevant sources, and support data-intensive research workflows.",
     bulletsTitle: "What It Does:",
-    bullets: ["Automated literature synthesis.", "Pattern discovery across large datasets.", "Faster time-to-insight for research teams."],
+    bullets: [
+      "Assist with literature search and summarization.",
+      "Organize and classify research information.",
+      "Support faster access to relevant knowledge.",
+    ],
     img: "/images/usecase-science-research.jpg",
-    alt: "Science and Research agentic AI use case",
+    alt: "Science and research AI agent use case",
   },
   {
-    name: "EdTech",
-    description: "Agents personalize learning journeys and automate support ticket resolution for global education platforms.",
+    name: "Education",
+    description:
+      "AI agents can support educational platforms and teams through conversational assistance, information retrieval, content processing, and administrative workflow automation.",
     bulletsTitle: "What It Does:",
-    bullets: ["Personalized learner support at scale.", "Automated content classification and routing.", "Faster resolution for support tickets."],
+    bullets: [
+      "Provide AI-assisted learner and staff support.",
+      "Process and organize educational content.",
+      "Automate routine support and administrative workflows.",
+    ],
     img: "/images/usecase-edtech.png",
-    alt: "EdTech agentic AI use case",
+    alt: "Education AI agent use case",
   },
 ];
 
 const BUILDING_BLOCKS = [
-  { icon: Target, title: "Strategy", text: "AI augmentation, blending human-in-the-loop expertise." },
-  { icon: BoxesIcon, title: "Platform Design & Engineering", text: "Straive builds multi-agent orchestration through LLM Foundry." },
-  { icon: Bot, title: "Agent Development & Specialization", text: "Our teams create custom multifunctional AI agents for reasoning and automation." },
-  { icon: UserCog, title: "Personalization (Agent-Aware)", text: "Personalize end-to-end with continuous, real-time monitoring and ROI tracking." },
-  { icon: Lock, title: "Governance & Safeguards", text: "Straive embeds risk mitigation, auditability, and compliance with GDPR, ISO, and SOX standards." },
-  { icon: RefreshCw, title: "Modernization & Integration", text: "We assess AI maturity, modernize legacy systems, and integrate emerging frameworks for future readiness." },
+  {
+    icon: Target,
+    title: "AI Strategy",
+    text: "Identify practical business processes where AI agents and automation can create useful operational value.",
+  },
+  {
+    icon: BoxesIcon,
+    title: "Platform Design & Engineering",
+    text: "Design the architecture required to connect AI models, applications, data, tools, and business workflows.",
+  },
+  {
+    icon: Bot,
+    title: "Agent Development",
+    text: "Create specialized AI agents designed around specific business tasks, workflows, and user interactions.",
+  },
+  {
+    icon: UserCog,
+    title: "Human-in-the-Loop",
+    text: "Keep people involved in important decisions, approvals, exceptions, and workflows that require human judgment.",
+  },
+  {
+    icon: Lock,
+    title: "Governance & Safeguards",
+    text: "Build appropriate access controls, monitoring, validation, and governance into AI-enabled workflows.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Integration & Modernization",
+    text: "Connect AI agents with existing applications and modernize workflows where intelligent automation can improve operations.",
+  },
 ];
 
 const CLIENT_JOURNEYS = [
-  { icon: Headset, title: "Hardship Collections Agent", bullets: ["Streamlined scalable financial support automation using conversational AI.", "Provided real-time dashboards for customer insights and payment plans.", "Reduced call center load while improving customer experience."] },
-  { icon: Stethoscope, title: "Adverse Event Detection", bullets: ["Improved clinical trial safety and compliance with a multi-agent LLM workflow.", "Automated detection of adverse events from trial data.", "Delivered pharmacovigilance-ready reports for regulators."] },
-  { icon: Bot, title: "Research Assistant Agent", bullets: ["Accelerated literature review and resilience across research workflows.", "Automated shortlisting and qualification of relevant sources.", "Delivered faster, reliable insights for research teams."] },
-  { icon: Truck, title: "Vendor Intelligence", bullets: ["Optimized vendor management with AI-led data processing.", "Analyzed multi-format vendor data (Excel, PDFs, Docs).", "Delivered faster, reliable vendor insights for managers."] },
-  { icon: Ticket, title: "Ticket AI Assist", bullets: ["Streamlined ticket lifecycle and management for global airlines.", "Automated classification of loyalty/rebookable queries.", "Boosted workflow accuracy resolving frequently asked queries."] },
+  {
+    icon: Headset,
+    title: "AI Customer Support",
+    bullets: [
+      "Assist support teams with repetitive customer requests.",
+      "Provide conversational access to relevant business information.",
+      "Route complex requests to the appropriate human team.",
+    ],
+  },
+  {
+    icon: Stethoscope,
+    title: "Document Processing",
+    bullets: [
+      "Extract relevant information from business documents.",
+      "Classify and organize incoming information automatically.",
+      "Support teams with faster access to structured data.",
+    ],
+  },
+  {
+    icon: Bot,
+    title: "Research Assistant",
+    bullets: [
+      "Help teams search and summarize large information sources.",
+      "Organize relevant research material.",
+      "Support knowledge-intensive business workflows.",
+    ],
+  },
+  {
+    icon: Truck,
+    title: "Vendor Intelligence",
+    bullets: [
+      "Process information from different vendor documents.",
+      "Organize vendor-related data for operational teams.",
+      "Support faster analysis and information retrieval.",
+    ],
+  },
+  {
+    icon: Ticket,
+    title: "IT Service Desk Assistant",
+    bullets: [
+      "Assist with common IT support requests.",
+      "Classify and route incoming service tickets.",
+      "Help support teams resolve repetitive issues efficiently.",
+    ],
+  },
 ];
 
 export default function AgenticAISolutions() {
-  const [form, setForm] = useState({ firstName: "", lastName: "", email: "", message: "" });
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Thanks! We'll get back to you soon.");
@@ -137,20 +240,37 @@ export default function AgenticAISolutions() {
 
   return (
     <>
-      {/* Hero + inline signup */}
+      {/* Hero */}
       <section
         className="relative overflow-hidden text-white"
-        style={{ background: "linear-gradient(120deg, #0a0e1f 0%, #191033 50%, #241040 100%)" }}
+        style={{
+          background:
+            "linear-gradient(120deg, #0a0e1f 0%, #191033 50%, #241040 100%)",
+        }}
       >
         <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_15%_20%,rgba(249,115,22,0.3),transparent_55%)]" />
+
         <div className="relative section-container py-16 md:py-20 grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h1 className="text-2xl md:text-4xl font-semibold mb-3">High-Impact AI Solutions in Days &mdash; Not Months</h1>
-            <p className="text-sm text-white/70">Deploy Agentic AI solutions with LLM Foundry, a platform that gets things done faster.</p>
+            <h1 className="text-2xl md:text-4xl font-semibold mb-3">
+              Build Intelligent AI Agents for Real Business Workflows
+            </h1>
+
+            <p className="text-sm text-white/70 leading-relaxed">
+              Design AI agents that can understand information, use business
+              tools, automate tasks, and work alongside people across
+              enterprise workflows.
+            </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-white rounded-lg p-6 text-[#1a1a1a] space-y-3">
-            <p className="text-sm font-semibold mb-1">Interested in Agentic AI solutions? Sign up!</p>
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white rounded-lg p-6 text-[#1a1a1a] space-y-3"
+          >
+            <p className="text-sm font-semibold mb-1">
+              Interested in Agentic AI solutions?
+            </p>
+
             <div className="grid grid-cols-2 gap-3">
               <input
                 name="firstName"
@@ -160,6 +280,7 @@ export default function AgenticAISolutions() {
                 required
                 className="border border-black/15 rounded-md px-3 py-2 text-sm outline-none focus:border-brand-orange"
               />
+
               <input
                 name="lastName"
                 placeholder="Last Name*"
@@ -169,6 +290,7 @@ export default function AgenticAISolutions() {
                 className="border border-black/15 rounded-md px-3 py-2 text-sm outline-none focus:border-brand-orange"
               />
             </div>
+
             <input
               name="email"
               type="email"
@@ -178,6 +300,7 @@ export default function AgenticAISolutions() {
               required
               className="w-full border border-black/15 rounded-md px-3 py-2 text-sm outline-none focus:border-brand-orange"
             />
+
             <textarea
               name="message"
               placeholder="Message*"
@@ -187,62 +310,100 @@ export default function AgenticAISolutions() {
               required
               className="w-full border border-black/15 rounded-md px-3 py-2 text-sm outline-none focus:border-brand-orange resize-none"
             />
-            <button type="submit" className="btn-pill btn-orange text-[11px] px-6 py-2.5 uppercase">Submit</button>
+
+            <button
+              type="submit"
+              className="btn-pill btn-orange text-[11px] px-6 py-2.5 uppercase"
+            >
+              Submit
+            </button>
           </form>
         </div>
       </section>
 
-      {/* Recognized for impactful results */}
+      {/* Agentic AI overview */}
       <section className="bg-white py-14">
         <div className="section-container">
-          <h2 className="text-xl md:text-2xl font-semibold text-[#10162B] text-center mb-10">We are Recognized for Impactful Results</h2>
-          <div className="grid sm:grid-cols-3 gap-6">
-            {AWARDS.map(({ icon: Icon, title, sub }) => (
-              <div key={title} className="flex flex-col items-center text-center gap-3 border border-black/10 rounded-lg p-6">
-                <Icon className="w-9 h-9 text-brand-orange" />
-                <p className="text-sm font-semibold text-[#10162B]">{title}</p>
-                <p className="text-[11px] text-[#7a7a8a]">{sub}</p>
-              </div>
-            ))}
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-xl md:text-2xl font-semibold text-[#10162B] mb-4">
+              From AI Assistants to Intelligent Autonomous Workflows
+            </h2>
+
+            <p className="text-sm text-[#4a4a5a] leading-relaxed">
+              Agentic AI can go beyond generating responses by helping
+              organizations execute multi-step tasks. Work Science designs
+              agent-based solutions that connect AI models with business
+              information, applications, tools, and human workflows.
+            </p>
           </div>
         </div>
       </section>
 
-      <ToolkitTabs heading="Our Modular Agentic AI Toolkits" tabs={TOOLKIT_TABS} />
+      <ToolkitTabs
+        heading="Our Agentic AI Solution Toolkit"
+        tabs={TOOLKIT_TABS}
+      />
 
-      <ToolkitTabs heading="Our Agentic AI Use Cases Across Industries" tabs={USE_CASE_TABS} />
+      <ToolkitTabs
+        heading="Agentic AI Use Cases Across Industries"
+        tabs={USE_CASE_TABS}
+      />
 
+      {/* Building blocks */}
       <section className="bg-[#f7f7f9] pb-14 pt-14">
         <div className="section-container">
-          <h2 className="text-xl md:text-2xl font-semibold text-[#10162B] text-center mb-10">The Building Blocks of Straive&rsquo;s Agentic AI</h2>
+          <h2 className="text-xl md:text-2xl font-semibold text-[#10162B] text-center mb-10">
+            Building Blocks of Agentic AI Solutions
+          </h2>
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {BUILDING_BLOCKS.map(({ icon: Icon, title, text }) => (
-              <div key={title} className="bg-white border border-black/10 rounded-lg p-5">
+              <div
+                key={title}
+                className="bg-white border border-black/10 rounded-lg p-5"
+              >
                 <Icon className="w-7 h-7 text-brand-orange mb-3" />
-                <p className="text-sm font-semibold text-[#10162B] mb-1">{title}</p>
-                <p className="text-[12px] text-[#4a4a5a] leading-relaxed">{text}</p>
+
+                <p className="text-sm font-semibold text-[#10162B] mb-1">
+                  {title}
+                </p>
+
+                <p className="text-[12px] text-[#4a4a5a] leading-relaxed">
+                  {text}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Client journeys */}
+      {/* Use cases */}
       <section className="bg-white py-14">
         <div className="section-container">
           <h2 className="text-xl md:text-2xl font-semibold text-[#10162B] text-center mb-10">
-            When Agentic AI Gets to Work: Real Client Journeys
+            Agentic AI in Action
           </h2>
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {CLIENT_JOURNEYS.map(({ icon: Icon, title, bullets }) => (
-              <div key={title} className="border border-black/10 rounded-lg p-5">
+              <div
+                key={title}
+                className="border border-black/10 rounded-lg p-5"
+              >
                 <Icon className="w-7 h-7 text-brand-orange mb-3" />
-                <p className="text-sm font-semibold text-[#10162B] mb-2">{title}</p>
+
+                <p className="text-sm font-semibold text-[#10162B] mb-2">
+                  {title}
+                </p>
+
                 <ul className="space-y-1.5">
-                  {bullets.map((b) => (
-                    <li key={b} className="text-[11px] text-[#4a4a5a] flex gap-1.5">
+                  {bullets.map((bullet) => (
+                    <li
+                      key={bullet}
+                      className="text-[11px] text-[#4a4a5a] flex gap-1.5"
+                    >
                       <span className="text-brand-orange">&#8226;</span>
-                      {b}
+                      {bullet}
                     </li>
                   ))}
                 </ul>
@@ -259,9 +420,18 @@ export default function AgenticAISolutions() {
         <div className="section-container">
           <div className="bg-brand-orange rounded-2xl text-center py-14 px-6">
             <h2 className="text-xl md:text-2xl font-semibold text-white mb-6 max-w-xl mx-auto">
-              Ready to transform your enterprise with autonomous AI agents?
+              Build AI Agents Around Your Business Workflows
             </h2>
-            <button className="btn-pill bg-white text-brand-orange text-[11px] px-6 py-3 uppercase">Book a Demo</button>
+
+            <p className="text-sm text-white/90 max-w-2xl mx-auto mb-6">
+              Explore how AI agents can support customer service, document
+              processing, research, IT operations, and other knowledge-heavy
+              business processes.
+            </p>
+
+            <button className="btn-pill bg-white text-brand-orange text-[11px] px-6 py-3 uppercase">
+              Talk to Our Experts
+            </button>
           </div>
         </div>
       </section>

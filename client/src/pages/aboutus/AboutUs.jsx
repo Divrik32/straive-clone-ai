@@ -9,10 +9,11 @@ export default function AboutUs() {
     <>
       <AboutPageHero
         theme="gold"
-        eyebrow="About Straive"
-        title="We Partner to Operationalize Analytics & AI for Global Enterprises"
-        subtitle="An AI operationalization company built by people who believe in doing, not just telling."
+        eyebrow="About Work Science"
+        title="We Help Organizations Operationalize Data, Analytics & AI"
+        subtitle="A technology and AI services company focused on turning data, analytics, and AI capabilities into practical business solutions."
       />
+
       <WhatDefinesUs />
       <LeadershipGrid />
       <GlobalHeadlines />

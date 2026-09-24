@@ -7,112 +7,156 @@ import CaseStudyGrid from "../../components/servicepage/CaseStudyGrid";
 import ContactForm from "../../components/ContactForm";
 
 const SEGMENTS = [
-  { icon: Wallet, title: "Wealth Management", text: "Empowered solutions that optimize performance, risk, and advisor productivity across the ever-evolving wealth landscape." },
-  { icon: Building2, title: "Private Equity and Private Credit", text: "We empower private equity and credit firms with data-driven analytics to enhance decision-making, assess risk, and boost returns across alternative investments." },
-  { icon: ShieldCheck, title: "Insurance Investment Management", text: "Leveraging AI and analytics, we help insurance firms optimize asset allocation and improve investment strategies while ensuring regulatory compliance." },
+  {
+    icon: Wallet,
+    title: "Wealth Management",
+    text: "Use AI, analytics, and automation to improve portfolio operations, client reporting, research workflows, and advisor productivity.",
+  },
+  {
+    icon: Building2,
+    title: "Private Equity & Private Credit",
+    text: "Apply data-driven analytics and intelligent workflows to support investment analysis, portfolio monitoring, risk assessment, and reporting.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Investment & Risk Management",
+    text: "Use data, AI, and automation to improve investment operations, risk monitoring, compliance workflows, and decision support.",
+  },
 ];
 
 const USE_CASES = [
   {
     name: "Client Reporting Automation",
     img: "/images/cm-toolkit-1.webp",
-    alt: "Client Reporting Automation",
+    alt: "Client reporting automation",
     description:
-      "For a $500 Billion AUM Asset Manager, we created a data processing framework with Alteryx and SQL to automate workflows. Automated reconciliation enhanced data accuracy, customized reporting, and streamlined report generation. This integration of CRM, reporting, and finance systems reduced manual effort and improved efficiency, enabling the client to make informed strategic decisions.",
-    bulletsTitle: "Impact:",
+      "Automate data collection, validation, reconciliation, and report generation across investment and client reporting workflows.",
+    bulletsTitle: "What It Delivers:",
     bullets: [
-      "95% accuracy",
-      "70% reduction in manual effort",
+      "Automated data processing",
+      "Consistent reporting workflows",
+      "Reduced repetitive manual work",
     ],
   },
-
   {
-    name: "RFP/DDQ Automation",
+    name: "RFP & DDQ Automation",
     img: "/images/cm-toolkit-2.webp",
-    alt: "RFP and DDQ Automation",
+    alt: "RFP and DDQ automation",
     description:
-      "AI-assisted response generation for RFPs and due-diligence questionnaires, drawing from a governed knowledge base to cut turnaround time significantly.",
-    bulletsTitle: "Impact:",
+      "Use AI to help teams search governed knowledge, draft responses, and organize information for RFPs and due-diligence questionnaires.",
+    bulletsTitle: "What It Delivers:",
     bullets: [
-      "60% faster RFP turnaround",
-      "Consistent, audit-ready responses",
+      "Faster information retrieval",
+      "Consistent AI-assisted responses",
+      "Reusable knowledge workflows",
     ],
   },
-
   {
-    name: "AI/CRM/BCM Reconciliation",
+    name: "Data Reconciliation",
     img: "/images/cm-toolkit-3.webp",
-    alt: "AI CRM BCM Reconciliation",
+    alt: "Investment data reconciliation",
     description:
-      "Automated reconciliation across CRM and book-of-record systems, flagging discrepancies in real time and reducing manual reviewer effort.",
-    bulletsTitle: "Impact:",
+      "Automate reconciliation across business systems and identify data discrepancies that require review.",
+    bulletsTitle: "What It Delivers:",
     bullets: [
-      "Reduced reconciliation cycle time",
-      "Improved data integrity",
+      "Automated reconciliation workflows",
+      "Improved data visibility",
+      "Faster exception identification",
     ],
   },
-
   {
     name: "Entity Resolution",
     img: "/images/cm-toolkit-4.webp",
-    alt: "Entity Resolution",
+    alt: "Entity resolution",
     description:
-      "AI-driven entity matching unifies fragmented client and counterparty records across systems, improving KYC and reporting accuracy.",
-    bulletsTitle: "Impact:",
+      "Use intelligent matching to connect fragmented client, company, and counterparty records across multiple systems.",
+    bulletsTitle: "What It Delivers:",
     bullets: [
-      "Unified golden-source records",
-      "Faster KYC processing",
+      "Connected business records",
+      "Improved data quality",
+      "More efficient information management",
     ],
   },
-
   {
-    name: "Research Synthesis",
+    name: "Research Intelligence",
     img: "/images/cm-toolkit-5.webp",
-    alt: "Research Synthesis",
+    alt: "Investment research intelligence",
     description:
-      "LLM-powered synthesis condenses analyst research and market data into concise, decision-ready briefs for portfolio teams.",
-    bulletsTitle: "Impact:",
+      "Use AI to search, summarize, classify, and organize research and market information for investment and business teams.",
+    bulletsTitle: "What It Delivers:",
     bullets: [
-      "Faster research turnaround",
-      "Consistent research quality",
+      "Faster research workflows",
+      "AI-assisted information discovery",
+      "Structured knowledge access",
     ],
   },
 ];
 
 const INSIGHTS = [
-  { title: "AML Response for Speed & Accuracy", img: "/images/cm-insight-1.webp", label: "Case Study" },
-  { title: "Unveiling Price Anomalies in Investment Management", img: "/images/cm-insight-2.webp", label: "Whitepaper" },
-  { title: "Automated Data Extraction and Reconciliation", img: "/images/cm-insight-3.webp", label: "Case Study" },
+  {
+    title: "AI-Powered Financial Data Processing",
+    img: "/images/cm-insight-1.webp",
+    label: "Insight",
+  },
+  {
+    title: "Intelligent Data Reconciliation for Investment Operations",
+    img: "/images/cm-insight-2.webp",
+    label: "Insight",
+  },
+  {
+    title: "Using AI to Improve Financial Research Workflows",
+    img: "/images/cm-insight-3.webp",
+    label: "Insight",
+  },
 ];
 
 export default function CapitalMarkets() {
   return (
     <>
       <IndustryHero
-        title="Data-Driven & AI-Powered Investment Management"
-        subtitle="Capital Markets solutions built on analytics and AI."
+        title="AI-Powered Solutions for Capital Markets"
+        subtitle="Use AI, analytics, and intelligent automation to modernize investment management workflows."
         buttons={["Explore Solutions", "Book a Demo"]}
       />
 
       <IndustryBanner
-        heading="Analytics and AI Solutions Empower the World's Leading Investment Management Firms"
-        text="Straive recognizes key challenges across the investment value chain and provides cutting-edge advanced analytics solutions that drive real business impact."
-        bullets={["Improved revenue growth", "Increased operational efficiency", "Enhanced client experience"]}
+        heading="Modernize Investment Operations with Data and AI"
+        text="Work Science helps investment and financial organizations use data, AI, analytics, and automation to improve information processing, reporting, research, and operational workflows."
+        bullets={[
+          "Intelligent data processing",
+          "Automated business workflows",
+          "AI-assisted decision support",
+        ]}
       />
 
-      <IconCardGrid heading="Segments We Support" items={SEGMENTS} columns={3} />
+      <section id="solutions-section" className="scroll-mt-24">
+        <IconCardGrid
+          heading="Segments We Support"
+          items={SEGMENTS}
+          columns={3}
+        />
+      </section>
 
-      <ToolkitTabs heading="Straive Drives Business Impact for Investment Managers" tabs={USE_CASES} />
+      <ToolkitTabs
+        heading="AI & Data Use Cases for Investment Management"
+        tabs={USE_CASES}
+      />
 
       <IndustryBanner
-        heading="Drive Operational Efficiency and AI-Driven ROI for Asset Managers"
-        text="Straive's investment management solutions blend deep domain expertise with AI operationalization to help asset managers move faster, reduce cost, and stay compliant."
-        buttonLabel="Download Brochure"
+        heading="Build Smarter Investment Operations"
+        text="Connect financial data, AI capabilities, analytics, and business workflows to create more efficient and connected investment operations."
+        buttonLabel="Talk to Our Experts"
       />
 
-      <CaseStudyGrid heading="Explore Our Latest Insights" items={INSIGHTS} tag />
+      <CaseStudyGrid
+        heading="Insights for Financial Services"
+        items={INSIGHTS}
+        tag
+      />
 
-      <ContactForm />
+      <section id="contact-form" className="scroll-mt-24">
+        <ContactForm />
+      </section>
     </>
   );
 }

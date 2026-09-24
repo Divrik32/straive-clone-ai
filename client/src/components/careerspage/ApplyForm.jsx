@@ -1,16 +1,71 @@
 import { useState } from "react";
 
-const POSITIONS = ["Data & AI Operations", "Engineering", "Insights & Analytics", "Client Solutions", "Other"];
-const SOURCES = ["LinkedIn", "Job Board", "Referral", "Straive Website", "Other"];
+const POSITIONS = [
+  "Software Development",
+  "Frontend Development",
+  "Backend Development",
+  "Data & Analytics",
+  "AI & Machine Learning",
+  "Cloud & DevOps",
+  "UI/UX & Design",
+  "Business & Client Solutions",
+  "Other",
+];
+
+const SOURCES = [
+  "LinkedIn",
+  "Job Board",
+  "Referral",
+  "Work Science Website",
+  "Social Media",
+  "Other",
+];
 
 function GlobeGraphic() {
   return (
-    <svg viewBox="0 0 240 200" className="w-full max-w-xs mx-auto" fill="none">
+    <svg
+      viewBox="0 0 240 200"
+      className="w-full max-w-xs mx-auto"
+      fill="none"
+    >
       <circle cx="120" cy="100" r="55" fill="#e5e5ea" />
-      <circle cx="120" cy="100" r="55" stroke="#c9c9d4" strokeWidth="1" />
-      <ellipse cx="120" cy="100" rx="90" ry="30" stroke="#c9c9d4" strokeWidth="1" transform="rotate(-15 120 100)" />
-      <ellipse cx="120" cy="100" rx="90" ry="30" stroke="#c9c9d4" strokeWidth="1" transform="rotate(15 120 100)" />
-      <ellipse cx="120" cy="100" rx="55" ry="90" stroke="#c9c9d4" strokeWidth="1" />
+      <circle
+        cx="120"
+        cy="100"
+        r="55"
+        stroke="#c9c9d4"
+        strokeWidth="1"
+      />
+
+      <ellipse
+        cx="120"
+        cy="100"
+        rx="90"
+        ry="30"
+        stroke="#c9c9d4"
+        strokeWidth="1"
+        transform="rotate(-15 120 100)"
+      />
+
+      <ellipse
+        cx="120"
+        cy="100"
+        rx="90"
+        ry="30"
+        stroke="#c9c9d4"
+        strokeWidth="1"
+        transform="rotate(15 120 100)"
+      />
+
+      <ellipse
+        cx="120"
+        cy="100"
+        rx="55"
+        ry="90"
+        stroke="#c9c9d4"
+        strokeWidth="1"
+      />
+
       <circle cx="55" cy="70" r="4" fill="#F1591F" />
       <circle cx="190" cy="60" r="3" fill="#F1591F" />
       <circle cx="70" cy="150" r="3" fill="#F1591F" />
@@ -30,36 +85,66 @@ export default function ApplyForm() {
     source: "",
     message: "",
   });
+
   const [agree, setAgree] = useState(false);
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const safePositions = Array.isArray(POSITIONS) ? POSITIONS : [];
+  const safeSources = Array.isArray(SOURCES) ? SOURCES : [];
+
+  const handleChange = (e) =>
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Thanks for your interest! Our talent team will be in touch soon.");
+
+    alert(
+      "Thanks for your interest in Work Science! Our team will get in touch with you soon."
+    );
   };
 
   return (
-    <section className="bg-[#f2f2f2] py-16 md:py-20">
+    <section
+      id="career-application"
+      className="bg-[#f2f2f2] py-16 md:py-20 scroll-mt-24"
+    >
       <div className="section-container grid md:grid-cols-2 gap-10 items-start">
         <div className="flex flex-col items-center md:items-start md:pt-6">
           <h2 className="text-xl font-semibold text-brand-orange mb-8 text-center md:text-left">
-            Amplify your career
+            Take the Next Step in Your Career
           </h2>
+
           <GlobeGraphic />
+
+          <p className="text-sm text-[#4a4a5a] text-center md:text-left max-w-sm leading-relaxed mt-6">
+            Tell us about your experience, skills, and the kind of work you
+            would like to explore. We are always interested in connecting with
+            people who enjoy building technology and solving problems.
+          </p>
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold text-[#10162B] mb-2">Leave a Message</h3>
+          <h3 className="text-lg font-semibold text-[#10162B] mb-2">
+            Start a Conversation
+          </h3>
+
           <p className="text-sm text-[#4a4a5a] mb-6">
-            Tell us a bit about yourself and the role you&rsquo;re interested in&mdash;our talent
-            team will get back to you soon.
+            Share your details and tell us about the type of opportunity you
+            are looking for.
           </p>
 
-          <form onSubmit={handleSubmit} className="bg-white rounded-lg p-6 md:p-8 space-y-5 shadow-sm">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white rounded-lg p-6 md:p-8 space-y-5 shadow-sm"
+          >
             <div className="grid sm:grid-cols-2 gap-5">
               <label className="block">
-                <span className="text-[11px] font-medium text-[#10162B]">First Name*</span>
+                <span className="text-[11px] font-medium text-[#10162B]">
+                  First Name*
+                </span>
+
                 <input
                   name="firstName"
                   value={form.firstName}
@@ -68,8 +153,12 @@ export default function ApplyForm() {
                   className="mt-1 w-full border border-black/15 rounded-md px-3 py-2 text-sm outline-none focus:border-brand-orange"
                 />
               </label>
+
               <label className="block">
-                <span className="text-[11px] font-medium text-[#10162B]">Last Name*</span>
+                <span className="text-[11px] font-medium text-[#10162B]">
+                  Last Name*
+                </span>
+
                 <input
                   name="lastName"
                   value={form.lastName}
@@ -82,7 +171,10 @@ export default function ApplyForm() {
 
             <div className="grid sm:grid-cols-2 gap-5">
               <label className="block">
-                <span className="text-[11px] font-medium text-[#10162B]">Email*</span>
+                <span className="text-[11px] font-medium text-[#10162B]">
+                  Email*
+                </span>
+
                 <input
                   type="email"
                   name="email"
@@ -92,8 +184,12 @@ export default function ApplyForm() {
                   className="mt-1 w-full border border-black/15 rounded-md px-3 py-2 text-sm outline-none focus:border-brand-orange"
                 />
               </label>
+
               <label className="block">
-                <span className="text-[11px] font-medium text-[#10162B]">Phone Number</span>
+                <span className="text-[11px] font-medium text-[#10162B]">
+                  Phone Number
+                </span>
+
                 <input
                   type="tel"
                   name="phone"
@@ -105,22 +201,31 @@ export default function ApplyForm() {
             </div>
 
             <label className="block">
-              <span className="text-[11px] font-medium text-[#10162B]">Applying to what position?</span>
+              <span className="text-[11px] font-medium text-[#10162B]">
+                Area of Interest
+              </span>
+
               <select
                 name="position"
                 value={form.position}
                 onChange={handleChange}
                 className="mt-1 w-full border border-black/15 rounded-md px-3 py-2 text-sm outline-none focus:border-brand-orange bg-white"
               >
-                <option value="">Select a position</option>
-                {POSITIONS.map((p) => (
-                  <option key={p} value={p}>{p}</option>
+                <option value="">Select an area</option>
+
+                {safePositions.map((position) => (
+                  <option key={position} value={position}>
+                    {position}
+                  </option>
                 ))}
               </select>
             </label>
 
             <label className="block">
-              <span className="text-[11px] font-medium text-[#10162B]">How did you hear about us?</span>
+              <span className="text-[11px] font-medium text-[#10162B]">
+                How did you hear about us?
+              </span>
+
               <select
                 name="source"
                 value={form.source}
@@ -128,28 +233,34 @@ export default function ApplyForm() {
                 className="mt-1 w-full border border-black/15 rounded-md px-3 py-2 text-sm outline-none focus:border-brand-orange bg-white"
               >
                 <option value="">Select an option</option>
-                {SOURCES.map((s) => (
-                  <option key={s} value={s}>{s}</option>
+
+                {safeSources.map((source) => (
+                  <option key={source} value={source}>
+                    {source}
+                  </option>
                 ))}
               </select>
             </label>
 
             <label className="block">
-              <span className="text-[11px] font-medium text-[#10162B]">Your Message</span>
+              <span className="text-[11px] font-medium text-[#10162B]">
+                Tell Us About Yourself
+              </span>
+
               <textarea
                 name="message"
-                rows={3}
+                rows={4}
                 value={form.message}
                 onChange={handleChange}
+                placeholder="Tell us about your skills, experience, interests, or the type of opportunity you are looking for..."
                 className="mt-1 w-full border border-black/15 rounded-md px-3 py-2 text-sm outline-none focus:border-brand-orange resize-y"
               />
             </label>
 
             <p className="text-[10px] text-[#7a7a8a] leading-relaxed">
-              By providing my contact information, I authorize Straive to send me personalized
-              communications about career opportunities. Please see our{" "}
-              <a href="#" className="text-brand-orange underline">Privacy Policy</a> for more details
-              or to opt out at any time.
+              By submitting your information, you agree that Work Science may
+              use the details provided to respond to your career inquiry and
+              discuss relevant opportunities.
             </p>
 
             <label className="flex items-center gap-2 text-[11px] text-[#4a4a5a]">
@@ -159,11 +270,16 @@ export default function ApplyForm() {
                 onChange={(e) => setAgree(e.target.checked)}
                 className="accent-brand-orange"
               />
-              Contact me about future career opportunities at Straive.
+
+              I would like to hear about future career opportunities at Work
+              Science.
             </label>
 
-            <button type="submit" className="btn-pill btn-orange text-[11px] px-8 py-3 uppercase">
-              Submit
+            <button
+              type="submit"
+              className="btn-pill btn-orange text-[11px] px-8 py-3 uppercase"
+            >
+              Submit Application
             </button>
           </form>
         </div>

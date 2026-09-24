@@ -11,9 +11,10 @@ export default function ESG() {
       <AboutPageHero
         theme="green"
         eyebrow="ESG"
-        title="Sustainability For A Better Tomorrow"
-        subtitle="Environmental, Social, and Governance strategies that reflect our shared dedication to a more sustainable and equitable future."
+        title="Building a More Sustainable Future"
+        subtitle="Our approach to environmental responsibility, social impact, ethical governance, and long-term sustainable growth."
       />
+
       <EsgCommitments />
       <EsgCertifications />
       <EsgSocialGovernance />
